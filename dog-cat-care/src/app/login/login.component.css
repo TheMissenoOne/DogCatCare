@@ -159,3 +159,12 @@ background-color:transparent;
 .foot-lnk{
 	text-align:center;
 }
+
+.label-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.label-checkbox span {
+  margin-right: 5px;
+}

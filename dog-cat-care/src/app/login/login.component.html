@@ -4,47 +4,47 @@
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
 		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Cadastro</label>
 		<div class="login-form">
-			<div class="sign-in-htm">
+			<form [formGroup]="formLogin" class="sign-in-htm">
 				<div class="group">
-					<label for="user" class="label">Usuário</label>
-					<input id="user" type="text" class="input">
+					<label for="username" class="label">Usuário</label>
+					<input id="username" formControlName="username" type="text" class="input">
 				</div>
 				<div class="group">
-					<label for="pass" class="label">Senha</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<label for="password" class="label">Senha</label>
+					<input id="password" formControlName="password" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<input id="check" type="checkbox" class="check" checked>
-					<label for="check"><span class="icon"></span>Manter Conectado</label>
+					<label for="check" class="label-checkbox"><span class="icon"></span>Manter Conectado</label>
 				</div>
 				<div class="group">
-					<input type="submit" class="button" value="Sign In">
+					<input type="submit" class="button" value="Sign In" (click)="toggleLogin()">
 				</div>
 				<div class="foot-lnk">
 					<a href="#forgot">Esqueceu a senha?</a>
 				</div>
-			</div>
-			<div class="sign-up-htm">
+			</form>
+			<form [formGroup]="formRegister"  class="sign-up-htm">
 				<div class="group">
-					<label for="user" class="label">Usuário</label>
-					<input id="user" type="text" class="input">
+					<label for="usernameRegister" class="label">Usuário</label>
+					<input id="usernameRegister" formControlName="usernameRegister" type="text" class="input">
 				</div>
 				<div class="group">
-					<label for="pass" class="label">Senha</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<label for="passwordRegister" class="label">Senha</label>
+					<input id="passwordRegister" formControlName="passwordRegister" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
-					<label for="pass" class="label">Repetir Senha</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<label for="passwordConfirm" class="label">Repetir Senha</label>
+					<input id="passwordConfirm" formControlName="passwordConfirm" type="password" class="input" data-type="password">
 				</div>
+        <div class="group">
+          <label for="emailRegister" class="label">Email</label>
+          <input id="emailRegister" formControlName="emailRegister" type="email" class="input">
+        </div>
 				<div class="group">
-					<label for="pass" class="label">Email</label>
-					<input id="pass" type="text" class="input">
+					<input type="submit" class="button" value="Sign Up" (click)="toggleRegister()">
 				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Sign Up">
-				</div>
-			</div>
+			</form>
 		</div>
 	</div>
 </div>
