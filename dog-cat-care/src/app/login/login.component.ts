@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {MustMatch} from "../util/validator";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,10 @@ export class LoginComponent implements OnInit {
 
   formRegister: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.formRegister = this.formBuilder.group({
@@ -24,19 +28,19 @@ export class LoginComponent implements OnInit {
       passwordRegister: new FormControl('', Validators.required),
       passwordConfirm: new FormControl('', Validators.required),
       emailRegister: new FormControl('', Validators.required)}, {
-      validator: MustMatch('password', 'passwordConfirm')
+      validator: MustMatch('passwordRegister', 'passwordConfirm')
     });
   }
 
   toggleLogin() {
     if(this.formLogin.valid){
-      alert('Logado com sucesso!');
+      this.router.navigate(['/home']);
     }
   }
 
   toggleRegister() {
     if(this.formRegister.valid){
-      alert('Cadastrado com sucesso!');
+      this.router.navigate(['/']);
     }
   }
 
