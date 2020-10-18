@@ -13,10 +13,8 @@ li {
 }
 
 .calendar {
-
   padding: 10px;
-  background-color: #448D89
-;
+  background-color: #448D89;
 }
 
 .calendar-header {
@@ -182,8 +180,9 @@ a {
   color: #cccccc;
   border-radius: 40px;
   text-align: center;
+  vertical-align: center;
   padding: 0px;
-  line-height: 25px;
+  line-height: 32px;
 }
 
 .time span {

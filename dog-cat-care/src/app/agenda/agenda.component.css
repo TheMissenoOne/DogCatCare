@@ -69,23 +69,24 @@ td>span {
   padding: 3px;
   margin: 0px;
   width: 20px;
-  height: 20px;
   line-height: 20px;
 }
 
-td>span:hover {
+td:hover {
   font-weight: bold;
 }
 
-td>span.active {
-  border: 1px solid #77d80f;
-  border-radius: 30px;
+td.active {
+  background: #0C3D45;
+  border-radius: 4px;
+  font-weight: bold;
 
 }
 
-td>span:active {
-  border: 2px solid #77d80f;
-  border-radius: 30px;
+td:active {
+  background: #0C3D45;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
 
@@ -153,7 +154,7 @@ a {
 .schedule-list {
   padding: 20px;
   margin-left: 37px;
-  border-left: 2px solid #83c7ff;
+  border-left: 2px solid #448D89;
   display: block;
 }
 
@@ -183,7 +184,7 @@ a {
   border-radius: 40px;
   text-align: center;
   padding: 0px;
-  line-height: 25px;
+  line-height: 32px;
 }
 
 .time span {
@@ -197,9 +198,9 @@ a {
   display: block;
   float: left;
   width: 305px;
-  margin-top: 10px;
+  margin-top: 6px;
   margin-left: 10px;
-  color: #223675;
+  color: #448D89;
   font-size: 14px;
   overflow: visible;
 }
@@ -246,7 +247,7 @@ a {
 }
 
 .description .description-content ul.contact-list li.contact.add-contact {
-  color: #98cd60;
+  color: #448D89;
   font-size: 20px;
   line-height: 60px;
 }
@@ -261,12 +262,13 @@ a {
 }
 
 .schedule-item.free .time {
-  border: 2px solid #98cd60;
+  border: 2px solid #448D89;
+  color: #448D89;
 }
 
 .schedule-item.free .description .description-header {
   background-color: #ffffff;
-  color: #c5c5c5;
+  color: #448D89;
   display: block;
   float: left;
 
@@ -282,4 +284,14 @@ a {
   background-image: url(https://dl.dropboxusercontent.com/u/2915418/filler.png);
   background-repeat: no-repeat;
   background-position: right center;
+}
+
+.agenda-selected {
+  background: #0C3D45;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.agenda-outro-mes {
+  color: #0C3D45;
 }
