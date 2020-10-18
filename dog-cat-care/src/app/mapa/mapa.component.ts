@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mapa.component.css']
 })
 export class MapaComponent implements OnInit {
-  title = 'My first AGM project';
+
   lat = -23.9484635;
   lng = -46.3980415;
   constructor() { }

@@ -1,5 +1,9 @@
-<!-- this creates a google map on the page with the given lat/lng from -->
-<!-- the component as the initial center of the map: -->
+<div class="header">
+  <span class="header-content">
+      <i class="fa  fa-map-marked-alt fa-2x"></i>
+      Mapa
+  </span>
+</div>
 <agm-map [latitude]="lat" [longitude]="lng">
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 </agm-map>
