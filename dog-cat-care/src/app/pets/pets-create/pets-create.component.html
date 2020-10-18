@@ -9,10 +9,30 @@
   <div class="div-image">
     <img src="https://www.victorromero.com.br/wp-content/uploads/2019/03/image-placeholder-350x350.png">
   </div>
-  <div>
 
-    <button>Carregar Foto</button>
+  <div class="login-html">
+    <div class="login-form">
+      <form [formGroup]="formRegister" class="sign-in-htm">
+        <div class="group">
+          <label for="name" class="label">Nome</label>
+          <input id="name" formControlName="name" type="text" class="input">
+        </div>
+
+        <div class="group">
+          <label for="tipo" class="label">Tipo</label>
+          <select id="tipo" formControlName="tipo" class="input">
+            <option selected>Cachorro</option>
+            <option>Gato</option>
+          </select>
+        </div>
+
+        <div class="center group">
+          <input (click)="toggleRegister()" type="submit" class="button" value="Cadastrar">
+        </div>
+      </form>
+    </div>
   </div>
+
 
 
 </div>
