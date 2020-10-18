@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule  } from '@angular/material/snack-bar'
 import {MatInputModule} from "@angular/material/input";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import { PetsCreateComponent } from './pets/pets-create/pets-create.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     ConfigComponent,
     SobreComponent,
     OngsComponent,
-    DahsboardComponent
+    DahsboardComponent,
+    PetsCreateComponent
   ],
   imports: [
     BrowserModule,
