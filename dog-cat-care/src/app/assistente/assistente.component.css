@@ -1,5 +1,6 @@
 .assistant{
   overflow: hidden;
+  margin-right: 60px;
 }
 iframe{
   margin-top: -60px;
