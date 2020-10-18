@@ -7,7 +7,6 @@ li {
 .planner {
   font-family: 'Open Sans', sans-serif;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
   overflow: hidden;
   margin-right: 60px;
 }
@@ -23,11 +22,9 @@ li {
   color: #DDF7F8;
   border-bottom: 1px solid #6FC6CE;
   margin: 0;
-  padding: 0;
-  text-align: justify;
-  line-height: 0px;
-  font-size: 0px;
-  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
 }
 
 .calendar-header span {
@@ -55,6 +52,8 @@ th {
   font-weight: normal;
   font-size: 14px;
   color: #212121;
+
+  text-align: center;
 }
 
 td {
@@ -81,6 +80,7 @@ td>span:hover {
 td>span.active {
   border: 1px solid #77d80f;
   border-radius: 30px;
+
 }
 
 td>span:active {

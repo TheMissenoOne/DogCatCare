@@ -20,6 +20,9 @@ import { ConfigComponent } from './config/config.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { OngsComponent } from './ongs/ongs.component';
 import { DahsboardComponent } from './dahsboard/dahsboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule  } from '@angular/material/snack-bar'
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -36,16 +39,19 @@ import { DahsboardComponent } from './dahsboard/dahsboard.component';
     OngsComponent,
     DahsboardComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        OnsenModule,
-        NgbModule,
-        ReactiveFormsModule,
-        AgmCoreModule.forRoot({
-          apiKey: 'AIzaSyBP-RHgyCZFKceXxrl9EjPo4w2VdhE9kaM'
-        })
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    OnsenModule,
+    NgbModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBP-RHgyCZFKceXxrl9EjPo4w2VdhE9kaM'
+    }),
+    BrowserAnimationsModule,
+    MatInputModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
