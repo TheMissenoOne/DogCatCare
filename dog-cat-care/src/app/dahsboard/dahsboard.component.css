@@ -1,7 +1,25 @@
+
+
 div,
 ul,
 li {
   list-style-type: none;
+
+}
+
+.content{
+  margin: 2vh;
+}
+
+h5{
+  padding-left: 15px;
+}
+.services{
+  margin-right: 60px;
+}
+
+div.slide{
+  vertical-align: middle;
 }
 
 .planner {
@@ -90,6 +108,8 @@ td>span:active {
 
 .schedule {
   margin: 0;
+  box-sizing: content-box; /* So the width will be 100% + 17px */
+
 }
 
 .tabs {
@@ -149,6 +169,7 @@ a {
 
 
 .schedule-list {
+
   padding: 20px;
   margin-left: 37px;
   border-left: 2px solid #83c7ff;

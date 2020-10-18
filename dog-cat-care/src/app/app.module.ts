@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { OnsenModule } from 'ngx-onsenui';
 import {ReactiveFormsModule} from "@angular/forms";
@@ -47,6 +48,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     NgbModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+    SlickCarouselModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBP-RHgyCZFKceXxrl9EjPo4w2VdhE9kaM'
     }),
