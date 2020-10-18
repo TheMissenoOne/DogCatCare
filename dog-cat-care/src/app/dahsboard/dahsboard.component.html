@@ -18,8 +18,8 @@
                           (afterChange)="afterChange($event)"
                           (beforeChange)="beforeChange($event)">
           <div ngxSlickItem *ngFor="let slide of slides" class="slide" style = 'display:flex'>
-              <div style = 'margin:auto'>
-                <img src="../../assets/{{slide.img }}" class="slide" alt="" height="200px" width="auto" >
+              <div style = 'margin:auto; '>
+                <img src="../../assets/{{slide.img }}" class="slide rounded-lg" alt="" height="200px" width="auto" >
               </div>
           </div>
       </ngx-slick-carousel>
