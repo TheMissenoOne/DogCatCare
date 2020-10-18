@@ -9,12 +9,30 @@ import { HomeComponent } from './home/home.component';
 
 import { OnsenModule } from 'ngx-onsenui';
 import {ReactiveFormsModule} from "@angular/forms";
+import { PetsComponent } from './pets/pets.component';
+import { MapaComponent } from './mapa/mapa.component';
+import { AgendaComponent } from './agenda/agenda.component';
+import { AssistenteComponent } from './assistente/assistente.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { ConfigComponent } from './config/config.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { OngsComponent } from './ongs/ongs.component';
+import { DahsboardComponent } from './dahsboard/dahsboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    PetsComponent,
+    MapaComponent,
+    AgendaComponent,
+    AssistenteComponent,
+    PerfilComponent,
+    ConfigComponent,
+    SobreComponent,
+    OngsComponent,
+    DahsboardComponent
   ],
     imports: [
         BrowserModule,

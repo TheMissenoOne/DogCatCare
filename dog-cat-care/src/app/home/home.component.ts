@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  pages = [true, false, false, false, false, false, false, false, false, false];
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  show(page) {
+    this.pages = [false, false, false, false, false, false, false, false, false, false];
+    this.pages[page] = true;
   }
 
 }

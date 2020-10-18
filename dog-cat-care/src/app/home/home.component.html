@@ -1,1 +1,109 @@
-<h1>home</h1>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div class="area">
+      <app-dahsboard *ngIf="pages[0]"></app-dahsboard>
+      <app-pets *ngIf="pages[1]"></app-pets>
+      <app-mapa *ngIf="pages[2]"></app-mapa>
+      <app-agenda *ngIf="pages[3]"></app-agenda>
+      <app-assistente *ngIf="pages[4]"></app-assistente>
+      <app-perfil *ngIf="pages[5]"></app-perfil>
+      <app-config *ngIf="pages[6]"></app-config>
+      <app-sobre *ngIf="pages[7]"></app-sobre>
+      <app-ongs *ngIf="pages[8]"></app-ongs>
+    </div>
+    <nav class="main-menu">
+            <ul>
+                <li>
+                    <a  (click)="show(0)" >
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a  (click)="show(1)">
+                        <i class="fa fa-paw fa-2x"></i>
+                        <span class="nav-text">
+                            Pets
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a  (click)="show(2)">
+                       <i class="fa fa-map-marked-alt fa-2x"></i>
+                        <span class="nav-text">
+                            Mapa
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a  (click)="show(3)">
+                       <i class="fa fa-calendar-check fa-2x"></i>
+                        <span class="nav-text">
+                            Agenda
+                        </span>
+                    </a>
+
+                </li>
+                <li>
+                    <a  (click)="show(4)">
+                        <i class="fa fa-user-md fa-2x"></i>
+                        <span class="nav-text">
+                            Assistente
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a  (click)="show(5)">
+                        <i class="fa fa-users fa-2x"></i>
+                        <span class="nav-text">
+                           Perfil
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a  (click)="show(6)">
+                       <i class="fa fa-cogs fa-2x"></i>
+                        <span class="nav-text">
+                            Config
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a  (click)="show(7)">
+                        <i class="fa fa-info-circle fa-2x"></i>
+                        <span class="nav-text">
+                            Sobre
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a  (click)="show(8)">
+                       <i class="fa fa-globe fa-2x"></i>
+                        <span class="nav-text">
+                            Ongs
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="#">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+  </body>
+    </html>
