@@ -1,0 +1,22 @@
+.pet-create-container {
+  height: 100%;
+  background: #FFF;
+}
+
+.pet-create-container .div-image {
+  height: 100px;
+}
+
+.div-image {
+  display: flex;
+  justify-content: center;
+  margin-right: 60px;
+  padding-top: 10px;
+}
+
+.div-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #0C3D45;
+}

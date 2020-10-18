@@ -12,6 +12,7 @@ import {PerfilComponent} from "./perfil/perfil.component";
 import {ConfigComponent} from "./config/config.component";
 import {SobreComponent} from "./sobre/sobre.component";
 import {OngsComponent} from "./ongs/ongs.component";
+import {PetsCreateComponent} from "./pets/pets-create/pets-create.component";
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
       {
         path: 'pets',
         component: PetsComponent
+      },
+      {
+        path: 'add-pet',
+        component: PetsCreateComponent
       },
       {
         path: 'map',
