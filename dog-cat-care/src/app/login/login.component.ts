@@ -35,12 +35,16 @@ export class LoginComponent implements OnInit {
   toggleLogin() {
     if(this.formLogin.valid){
       this.router.navigate(['/home']);
+    } else {
+
     }
   }
 
   toggleRegister() {
     if(this.formRegister.valid){
       this.router.navigate(['/']);
+    } else {
+
     }
   }
 

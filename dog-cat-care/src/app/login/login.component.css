@@ -12,17 +12,11 @@ a{color:inherit;text-decoration:none}
 img{
 position: fixed;
 top: 82vh;
-height: 20vw;
-margin-top: 5vw;
-margin-left: 40vw;
 z-index: 3;
 background-color:transparent;
 }
 
 .login-wrap{
-  width:100%;
-	min-height: 100vh;
-	position:relative;
   background:url(../../assets/dog-cat-food.jpg) no-repeat;
   background-position: 30%;
   background-size: cover;
@@ -31,10 +25,7 @@ background-color:transparent;
 .login-html{
 	width:100%;
 	height:100vh;
-	position:absolute;
-	padding:60px 70px 50px 70px;
-  background: #066077;
-  opacity: .9;
+	padding:30px 35px 30px 35px;
 }
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
@@ -167,4 +158,29 @@ background-color:transparent;
 
 .label-checkbox span {
   margin-right: 5px;
+}
+
+.dogcare-logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.dogcare-logo img {
+  max-width: 96px;
+  max-height: 96px;
+}
+
+.sign-in-htm, .sign-up-htm {
+  max-width: 480px;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.background {
+  background: #066077;
+  opacity: .9;
 }

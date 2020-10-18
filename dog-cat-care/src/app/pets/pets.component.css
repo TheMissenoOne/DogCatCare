@@ -4,14 +4,9 @@
   color: white;
 }
 .cards-list {
-  width: 80%;
-  height: 100%;
   overflow-y: scroll;
   padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
   box-sizing: content-box; /* So the width will be 100% + 17px */
-  z-index: 0;
-  width: 100%;
-  flex-wrap: wrap;
 }
 
 .dog{
@@ -67,5 +62,14 @@
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
   }
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-right: 60px;
+  padding-bottom: 16px;
+  padding-top: 16px;
 }
 
