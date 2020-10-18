@@ -13,6 +13,7 @@ import {ConfigComponent} from "./config/config.component";
 import {SobreComponent} from "./sobre/sobre.component";
 import {OngsComponent} from "./ongs/ongs.component";
 import {PetsCreateComponent} from "./pets/pets-create/pets-create.component";
+import { PetDashboardComponent } from './pet.dashboard/pet.dashboard.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,13 @@ const routes: Routes = [
       },
       {
         path: 'pets',
-        component: PetsComponent
+        component: PetsComponent,
+        children: [
+          {
+            path: 'dashboard',
+            component: PetDashboardComponent
+          }
+        ]
       },
       {
         path: 'add-pet',
