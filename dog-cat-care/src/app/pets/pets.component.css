@@ -1,8 +1,3 @@
-.header{
-  padding-left: 15px;
-  background-color: #448D89;
-  color: white;
-}
 .cards-list {
   overflow-y: scroll;
   padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */

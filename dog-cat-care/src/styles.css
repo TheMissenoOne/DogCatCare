@@ -2,3 +2,22 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.header {
+  padding-left: 15px;
+  background-color: #0C3D45;
+  border-left: 1px solid #AAEBFB;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.header .header-content {
+  color: #AAEBFB;
+  font-size: 25px;
+}
+
+.header .header-content i {
+  font-size: 24px;
+  padding-right: 8px;
+}

@@ -23,6 +23,7 @@ import { DahsboardComponent } from './dahsboard/dahsboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule  } from '@angular/material/snack-bar'
 import {MatInputModule} from "@angular/material/input";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import {MatInputModule} from "@angular/material/input";
       apiKey: 'AIzaSyBP-RHgyCZFKceXxrl9EjPo4w2VdhE9kaM'
     }),
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
