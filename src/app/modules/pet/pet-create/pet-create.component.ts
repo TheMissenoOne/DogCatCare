@@ -74,10 +74,15 @@ export class PetCreateComponent implements OnInit {
     const file = evt.target.files[0];
 
     if (file) {
-      const reader = new FileReader();
+      if (file.size / 1024 < 300){
+        const reader = new FileReader();
 
-      reader.onload = this.handleReaderLoaded.bind(this);
-      reader.readAsBinaryString(file);
+        reader.onload = this.handleReaderLoaded.bind(this);
+        reader.readAsBinaryString(file);
+      } else {
+        this.petService.showMessage('Imagem muito grande (> 300KB)', true);
+      }
+
     }
   }
 
