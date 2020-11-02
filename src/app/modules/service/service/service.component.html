@@ -1,0 +1,32 @@
+<div class="container">
+  <form [formGroup]="formService">
+
+    <div class="div-image">
+      <img id="image2" [src]="image"/>
+    </div>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Tipo</mat-label>
+      <input matInput formControlName="tipo" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput formControlName="desc" readonly></textarea>
+    </mat-form-field>
+
+
+    <div class="form-footer">
+      <div>
+        <button class="button" mat-raised-button color="primary" type="submit">Contratar</button>
+        <button class="button" mat-raised-button color="primary" type="button" routerLink="../">Voltar</button>
+      </div>
+    </div>
+
+  </form>
+</div>
