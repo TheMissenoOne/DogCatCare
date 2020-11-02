@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {MedLog} from '../../shared/models/medlog.model';
-import {Pet} from '../../shared/models/pet.model';
 
 @Injectable({
   providedIn: 'root'
