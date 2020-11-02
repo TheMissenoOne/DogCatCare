@@ -1,1 +1,64 @@
-<p>agenda-main works!</p>
+<div class="container">
+  <mat-form-field class="max-width" appearance="outline">
+    <mat-label>Escolha a data</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="dataValue" (dateChange)="refreshData()" readonly>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker></mat-datepicker>
+  </mat-form-field>
+
+  <div class="max-width">
+
+    <div class="div-evento" *ngFor="let evento of eventos" (click)="openFormEvento(evento)">
+      <span class="evento">
+        <div class="evento-body max-width">
+          <span>{{evento.hora}}</span>
+          <span>{{evento.desc}}</span>
+
+            <i class="material-icons">
+          medical_services
+            </i>
+
+        </div>
+      </span>
+    </div>
+
+    <div class="div-center">
+      <button [disabled]="eventoFormOn" (click)="openFormEvento()" mat-raised-button color="primary" type="button">Novo
+      </button>
+    </div>
+
+    <form *ngIf="eventoFormOn" [formGroup]="formEvento" class="form-evento">
+
+      <mat-form-field class="max-width" appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <input matInput type="text" formControlName="desc" required>
+        <mat-error *ngIf="desc.invalid">Preencha a descrição</mat-error>
+      </mat-form-field>
+
+
+      <mat-form-field class="max-width" appearance="outline">
+        <mat-label>Escolha a data</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="data" readonly required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker></mat-datepicker>
+        <mat-error *ngIf="data.invalid">Preencha a data</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="max-width" appearance="outline">
+        <mat-label>Hora</mat-label>
+        <input matInput type="time" formControlName="hora" required>
+        <mat-error *ngIf="hora.invalid">Preencha a hora</mat-error>
+      </mat-form-field>
+
+      <div class="div-center">
+        <button mat-raised-button color="primary" type="submit"
+                (click)="handleSubmit()">{{ evento ? 'Salvar' : 'Adicionar' }}</button>
+        <button mat-raised-button color="primary" type="button" (click)="cancelFormEvento()">Cancelar</button>
+      </div>
+
+    </form>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,69 @@
+button {
+  margin-top: 10px;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.form-evento {
+  margin-top: 10px;
+}
+
+.div-evento + .div-evento {
+  border-top: solid 1px rgba(255,255,255, 0.25);
+}
+
+.evento-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  color: #FFF;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+
+.evento {
+  display: flex;
+  width: 100%;
+  max-width: 368px;
+}
+
+
+.div-evento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #3F8270;
+}
+
+.div-evento img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 0 0.5em #FFF;
+}
+
+.div-evento:hover {
+  transition: background-color 400ms;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.div-evento:hover img {
+  box-shadow: 0 0 0.5em #3F8270;
+}
+
+.div-evento:hover .evento-body {
+  transition: color 400ms;
+  color: #3F8270;
+}

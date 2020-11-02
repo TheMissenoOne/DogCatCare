@@ -13,7 +13,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {LoginRegisterLayoutComponent} from './shared/layouts/login-register-layout.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
@@ -30,6 +30,8 @@ import { PetCreateComponent } from './modules/pet/pet-create/pet-create.componen
 import { PetUpdateComponent } from './modules/pet/pet-update/pet-update.component';
 import {MatSelectModule} from '@angular/material/select';
 import { UserAccountComponent } from './modules/user/user-account/user-account.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -64,9 +66,14 @@ import { UserAccountComponent } from './modules/user/user-account/user-account.c
     MatButtonToggleModule,
     MatSnackBarModule,
     MatToolbarModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

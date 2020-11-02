@@ -192,3 +192,11 @@ mat-button-toggle {
 .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
   color: #fff;
 }
+
+.mat-icon-button {
+  color: #3F8270;
+}
+.mat-form-field-label {
+  color: #3F8270;
+}
+
