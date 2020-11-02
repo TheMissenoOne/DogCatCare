@@ -1,0 +1,48 @@
+.div-button-add {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.div-pet + .div-pet {
+  border-top: solid 1px rgba(63,130,112, 0.25);
+}
+
+.pet-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  color: #3F8270;
+  font-size: 16px;
+}
+
+.div-pet {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.div-pet img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.div-pet:hover {
+  transition: background-color 400ms;
+  background-color: #3F8270;
+  cursor: pointer;
+}
+
+.div-pet:hover .pet-body {
+  transition: color 400ms;
+  color: #FFFFFF;
+}
+
+.no-data {
+  margin: 30px 0px;
+  text-align: center;
+  font-size: 18px;
+  color: #3F8270;
+}

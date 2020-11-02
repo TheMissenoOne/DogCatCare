@@ -1,0 +1,97 @@
+<div class="signin-content">
+  <mat-card class="mat-elevation-z0">
+    <mat-card-header>
+
+      <div class="logo">
+        <img src="../../../../assets/logo.png">
+      </div>
+
+      <mat-button-toggle-group class="max-width" [value]="login" (change)="toggleLoginRegister()" >
+        <mat-button-toggle [value]="true">Login</mat-button-toggle>
+        <mat-button-toggle [value]="false">Cadastro</mat-button-toggle>
+      </mat-button-toggle-group>
+
+      <div class="mat-h1 title color-blue">
+        <i class="material-icons">
+          person
+        </i>
+        {{ login ? 'Login' : 'Cadastro' }}
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+
+
+      <form [formGroup]="formLogin" (ngSubmit)="handleLogin()" *ngIf="login">
+
+        <mat-form-field class="max-width">
+          <input matInput placeholder="E-mail" formControlName="email" required>
+          <mat-error *ngIf="email.invalid">Preencha o seu e-mail</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="max-width">
+          <input matInput type="password" placeholder="Senha" formControlName="senha" required>
+          <mat-error *ngIf="senha.invalid">Preencha a senha</mat-error>
+        </mat-form-field>
+
+        <div class="form-footer">
+          <span *ngIf="loading" class="loading-small">
+            <mat-spinner diameter="50"></mat-spinner>
+          </span>
+
+          <div *ngIf="!loading">
+            <button mat-raised-button color="primary" type="submit">Entrar</button>
+          </div>
+        </div>
+
+      </form>
+
+      <form [formGroup]="formRegister" (ngSubmit)="handleRegister()" *ngIf="!login">
+
+        <mat-form-field class="max-width">
+          <input matInput placeholder="Nome" formControlName="nome" required>
+          <mat-error *ngIf="nomeRegister.invalid">Preencha o seu nome</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="max-width">
+          <input matInput placeholder="CPF" formControlName="cpf" required>
+          <mat-error *ngIf="cpfRegister.invalid">Preencha o seu CPF</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="max-width">
+          <input matInput placeholder="Telefones" formControlName="telefones" required>
+          <mat-error *ngIf="telefonesRegister.invalid">Preencha o seu telefone</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="max-width">
+          <input matInput placeholder="E-mail" formControlName="email" required>
+          <mat-error *ngIf="emailRegister.invalid">Preencha o seu e-mail</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="max-width">
+          <input matInput type="password" placeholder="Senha" formControlName="senha" required>
+          <mat-error *ngIf="senhaRegister.errors?.required">Preencha a senha</mat-error>
+          <mat-error *ngIf="senhaRegister.errors?.minlength">A senha precisa ter no mínimo 8 caracteres</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="max-width">
+          <input matInput type="password" placeholder="Confirmação de Senha" formControlName="senhaConfirm" required>
+          <mat-error *ngIf="senhaConfirmRegister.errors?.required">Preencha a confirmação da senha</mat-error>
+          <mat-error *ngIf="senhaConfirmRegister.errors?.mustMatch">As senhas não coincidem</mat-error>
+
+        </mat-form-field>
+
+        <div class="form-footer">
+          <span *ngIf="loading" class="loading-small">
+            <mat-spinner diameter="50"></mat-spinner>
+          </span>
+
+          <div *ngIf="!loading">
+            <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+          </div>
+        </div>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+

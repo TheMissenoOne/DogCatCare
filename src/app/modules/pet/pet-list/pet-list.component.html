@@ -1,0 +1,23 @@
+<div class="div-pet" *ngFor="let pet of pets" (click)="updatePet(pet)">
+  <img [src]="pet.image">
+  <div class="pet-body max-width" >
+    <span>{{pet.nome}}</span>
+    <i class="material-icons">
+      pets
+    </i>
+  </div>
+</div>
+
+<div class="no-data" *ngIf="!petsOn">
+  NENHUM PET ADICIONADO
+</div>
+
+<div class="div-button-add">
+  <button mat-raised-button color="primary" type="button" routerLink="create">
+    <i class="material-icons">
+      pets
+    </i>
+    Adicionar
+  </button>
+</div>
+

@@ -1,0 +1,194 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 368px;
+}
+
+.container-small {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 468px;
+}
+
+button {
+  height: 48px;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title i {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.table-title {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: #3F8270;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.table-title i {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.max-width {
+  width: 100%;
+}
+
+.color-blue {
+  color: #3F8270;
+}
+
+.msg-success {
+  background-color: #3F8270;
+  color: #fff;
+}
+
+.msg-success button {
+  color: #fff;
+}
+
+.msg-error {
+  background-color: #b53f3f;
+  color: #fff;
+}
+
+.msg-error button {
+  color: #fff;
+}
+
+.loading-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+
+.div-center {
+  display: flex;
+  justify-content: center;
+}
+
+.div-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.mat-dialog-content {
+  max-height: 95vh !important;
+}
+
+.content .icon > i {
+  color: #FFF;
+  background-color: #3F8270;
+  border-radius: 4px;
+  padding: 1px;
+}
+
+.content .icon:hover {
+  cursor: pointer;
+}
+
+.content .warn > i {
+  background-color: #b53f3f;
+}
+
+.content table {
+  width: 100%;
+}
+
+.content a + a {
+  margin-left: 16px;
+}
+
+.icon-warn {
+  color: #b53f3f;
+}
+
+.content .icon-disable > i {
+  transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(0,0,0,.12);
+  color: rgba(0,0,0,.26);
+  cursor: default;
+  border-radius: 4px;
+  padding: 1px;
+}
+
+.mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn {
+  background-color: #b53f3f;
+  color: #FFFFFF;
+}
+
+.mat-raised-button.mat-primary {
+  background-color: #3F8270;
+}
+
+.mat-focused .mat-form-field-label {
+  color: #3F8270;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: #3F8270;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #3F8270;
+}
+
+.mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background: #3F8270;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: #3F8270;
+}
+
+
+
+mat-button-toggle-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-button-toggle {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+}
+
+.mat-button-toggle-checked {
+  background-color: #3F8270;
+}
+
+.mat-button-toggle-appearance-standard {
+  color: #3F8270;
+}
+
+.mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+  color: #fff;
+}

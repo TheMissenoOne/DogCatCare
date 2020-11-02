@@ -1,0 +1,55 @@
+<mat-sidenav-container class="sidenav-content">
+  <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true">
+    <mat-nav-list class="nav-list">
+
+      <a mat-list-item routerLink="dashboard">
+        <i class="material-icons">
+          home
+        </i>
+      </a>
+
+      <a mat-list-item routerLink="pet">
+        <i class="material-icons">
+          pets
+        </i>
+      </a>
+
+      <a mat-list-item routerLink="mapa">
+        <i class="material-icons">
+          map
+        </i>
+      </a>
+
+      <a mat-list-item routerLink="agenda">
+        <i class="material-icons">
+          event_note
+        </i>
+      </a>
+
+      <a mat-list-item routerLink="assistente" >
+        <i class="material-icons">
+          android
+        </i>
+      </a>
+
+      <div class="footer">
+        <a mat-list-item routerLink="account">
+          <i class="material-icons">
+            person
+          </i>
+        </a>
+        <a mat-list-item (click)="logout()">
+          <i class="material-icons">
+            exit_to_app
+          </i>
+        </a>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header></app-header>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,40 @@
+.sidenav {
+  background-color: #3F8270;
+  width: 56px;
+}
+
+.sidenav a {
+  color: #FFF;
+}
+
+.content {
+  background-color: #FFF;
+}
+
+.mat-sidenav-content {
+  min-height: 100vh;
+  background-color: #FFF;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #FFFFFF;
+  height: 58px;
+  margin-bottom: 8px;
+}
+
+.title a {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.mat-list-base {
+  padding-top: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
