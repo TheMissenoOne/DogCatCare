@@ -32,7 +32,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { UserAccountComponent } from './modules/user/user-account/user-account.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
-
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +69,10 @@ import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+          apiKey: 'AIzaSyBP-RHgyCZFKceXxrl9EjPo4w2VdhE9kaM'
+        })
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
