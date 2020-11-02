@@ -33,7 +33,7 @@ button + button {
   justify-content: space-between;
   align-items: center;
   margin-left: 10px;
-  color: #3F8270;
+  color: #0C3D45;
   font-size: 16px;
 }
 
@@ -61,7 +61,7 @@ button + button {
 
 .div-service:hover {
   transition: background-color 400ms;
-  background-color: #3F8270;
+  background-color: #0C3D45;
   cursor: pointer;
 }
 
@@ -71,7 +71,7 @@ button + button {
 
 .div-service:hover .service-body {
   transition: color 400ms;
-  color: #FFFFFF;
+  color: #AAEBFB;
 }
 
 .service-right {

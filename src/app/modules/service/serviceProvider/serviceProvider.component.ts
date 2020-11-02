@@ -36,7 +36,6 @@ export class ServiceProviderComponent implements OnInit {
     }
 
     this.services = this.serviceService.listByProviderId(this.serviceProvider.id);
-    console.log(this.services);
 
     this.headerService.headerData = {
       icon: 'pets',

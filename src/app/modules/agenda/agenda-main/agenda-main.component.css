@@ -43,7 +43,7 @@ button + button {
   align-items: center;
   padding: 10px;
   border-radius: 4px;
-  background-color: #3F8270;
+  background-color: #0C3D45;
 }
 
 .div-evento img {
@@ -65,5 +65,5 @@ button + button {
 
 .div-evento:hover .evento-body {
   transition: color 400ms;
-  color: #3F8270;
+  color: #0C3D45;
 }
