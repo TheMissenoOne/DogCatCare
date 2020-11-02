@@ -200,3 +200,7 @@ mat-button-toggle {
   color: #3F8270;
 }
 
+.mat-calendar-body-selected {
+  background-color: #3F8270;
+}
+
