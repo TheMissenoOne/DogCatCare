@@ -8,6 +8,17 @@
     </mat-form-field>
 
     <mat-form-field class="max-width" appearance="outline">
+      <mat-label>CPF</mat-label>
+      <input matInput formControlName="cpf" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Telefones</mat-label>
+      <input matInput formControlName="telefones" required>
+      <mat-error *ngIf="telefones.invalid">Preencha o seu telefone</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
       <mat-label>E-mail</mat-label>
       <input matInput formControlName="email" readonly>
     </mat-form-field>

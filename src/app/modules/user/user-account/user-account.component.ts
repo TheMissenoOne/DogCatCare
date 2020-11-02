@@ -36,7 +36,9 @@ export class UserAccountComponent implements OnInit {
 
     this.formUser = new FormGroup({
       nome: new FormControl(this.user.nome, Validators.required),
-      email: new FormControl(this.user.email, Validators.required)
+      email: new FormControl(this.user.email, Validators.required),
+      telefones: new FormControl(this.user.telefones, Validators.required),
+      cpf: new FormControl(this.user.cpf, Validators.required)
     });
 
   }
@@ -45,7 +47,11 @@ export class UserAccountComponent implements OnInit {
     return this.formUser.get('nome');
   }
 
-  handleSubmit() {
+  get telefones(): any {
+    return this.formUser.get('telefones');
+  }
+
+  handleSubmit(): void {
     if (this.formUser.valid) {
       const userFormValue = this.formUser.getRawValue();
       this.user = Object.assign(this.user, userFormValue);
