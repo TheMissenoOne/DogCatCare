@@ -17,8 +17,16 @@
   font-size: 16px;
 }
 
+.pet {
+  display: flex;
+  width: 100%;
+  max-width: 368px;
+}
+
+
 .div-pet {
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 10px;
 }
@@ -27,12 +35,17 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  box-shadow: 0 0 0.5em #3F8270;
 }
 
 .div-pet:hover {
   transition: background-color 400ms;
   background-color: #3F8270;
   cursor: pointer;
+}
+
+.div-pet:hover img {
+  box-shadow: 0 0 0.5em #FFFFFF;
 }
 
 .div-pet:hover .pet-body {

@@ -14,14 +14,18 @@ button + button {
 .div-image {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .div-image img {
   border-radius: 50%;
-
+  box-shadow: 0 0 1em #3F8270;;
   width: 180px;
   height: 180px;
+}
+
+.form-med-log {
+  margin-top: 10px;
 }
 
 .div-medlog + .div-medlog {
@@ -37,22 +41,36 @@ button + button {
   font-size: 16px;
 }
 
+.medlog {
+  display: flex;
+  width: 100%;
+  max-width: 368px;
+}
+
+
 .div-medlog {
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 10px;
+  border-radius: 4px;
 }
 
 .div-medlog img {
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
+  box-shadow: 0 0 0.5em #3F8270;
 }
 
 .div-medlog:hover {
   transition: background-color 400ms;
   background-color: #3F8270;
   cursor: pointer;
+}
+
+.div-medlog:hover img {
+  box-shadow: 0 0 0.5em #FFFFFF;
 }
 
 .div-medlog:hover .medlog-body {

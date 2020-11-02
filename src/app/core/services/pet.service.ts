@@ -39,8 +39,10 @@ export class PetService {
 
   updatePet(id: number, pet: Pet): boolean {
     let petsStored = this.listPets();
+    const petStored = petsStored.filter(obj => obj.id === id);
     petsStored = petsStored.filter(obj => obj.id !== id);
     pet.id = id;
+    pet.userId = petStored[0].userId;
     localStorage.setItem('pets', JSON.stringify([...petsStored, pet ]));
     this.showMessage('Pet atualizado com sucesso!', false);
     return true;

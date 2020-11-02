@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {MedLog} from '../../shared/models/medlog.model';
+import {Pet} from '../../shared/models/pet.model';
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +35,18 @@ export class MedlogService {
     } else {
       localStorage.setItem('medLogs', JSON.stringify([ medLog ]));
     }
-    this.showMessage('Cadastrado com sucesso!', false);
+    this.showMessage('Registro cadastrado com sucesso!', false);
+    return true;
+  }
+
+  updateMedLog(id: number, medLog: MedLog): boolean {
+    let medLogsStored = this.listMedLogs();
+    const medLogStored = medLogsStored.filter(obj => obj.id === id);
+    medLogsStored = medLogsStored.filter(obj => obj.id !== id);
+    medLog.id = id;
+    medLog.petId = medLogStored[0].petId;
+    localStorage.setItem('medLogs', JSON.stringify([...medLogsStored, medLog ]));
+    this.showMessage('Registro atualizado com sucesso!', false);
     return true;
   }
 

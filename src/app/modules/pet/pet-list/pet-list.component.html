@@ -1,11 +1,13 @@
 <div class="div-pet" *ngFor="let pet of pets" (click)="updatePet(pet)">
-  <img [src]="pet.image">
-  <div class="pet-body max-width" >
-    <span>{{pet.nome}}</span>
-    <i class="material-icons">
-      pets
-    </i>
-  </div>
+  <span class="pet">
+    <img [src]="pet.image">
+    <div class="pet-body max-width">
+      <span>{{pet.nome}}</span>
+      <i class="material-icons">
+        pets
+      </i>
+    </div>
+  </span>
 </div>
 
 <div class="no-data" *ngIf="!petsOn">

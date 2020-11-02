@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HeaderService} from '../../../core/services/header.service';
 import {PetService} from '../../../core/services/pet.service';
 import {Pet} from '../../../shared/models/pet.model';
@@ -15,6 +15,7 @@ import {MedlogService} from '../../../core/services/medlog.service';
 export class PetUpdateComponent implements OnInit {
 
   pet: Pet;
+  medLog: MedLog;
   medLogs: MedLog[];
 
   loading = false;
@@ -22,9 +23,12 @@ export class PetUpdateComponent implements OnInit {
   image: string;
 
   formPet: FormGroup;
+  formMedLog: FormGroup;
 
   tipos = ['Cachorro', 'Gato'];
+  tiposMedLog = ['Vacina', 'Exame', 'Cirurgia'];
   update = true;
+  medLogFormOn = false;
 
   constructor(
     private headerService: HeaderService,
@@ -38,26 +42,27 @@ export class PetUpdateComponent implements OnInit {
       routeUrl: 'pet',
       title: 'Atualizar Pet'
     };
+
+    this.pet = this.petService.pet;
+
+    if (typeof this.pet === 'undefined') {
+      this.router.navigate(['home/pet']).then();
+    } else {
+      this.refreshMedLogData();
+
+      this.image = this.pet.image;
+
+      this.formPet = new FormGroup({
+        nome: new FormControl(this.pet.nome, Validators.required),
+        tipo: new FormControl(this.pet.tipo, Validators.required),
+        dataNascimento: new FormControl(this.pet.dataNascimento, Validators.required),
+        cor: new FormControl(this.pet.cor, Validators.required)
+      });
+    }
   }
 
   ngOnInit(): void {
-    this.pet = this.petService.pet;
-
-    if(typeof this.pet === 'undefined'){
-      this.router.navigate(['home/pet']).then();
-    }
-
-    this.medLogs = this.medlogService.listMedLogsByPetId(this.pet.id);
-
-    this.image = this.pet.image;
-
-    this.formPet = new FormGroup({
-      nome: new FormControl(this.pet.nome, Validators.required),
-      tipo: new FormControl(this.pet.tipo, Validators.required),
-      dataNascimento: new FormControl(this.pet.dataNascimento, Validators.required),
-      cor: new FormControl(this.pet.cor, Validators.required)
-    });
-  }
+      }
 
   get nome(): any {
     return this.formPet.get('nome');
@@ -79,7 +84,7 @@ export class PetUpdateComponent implements OnInit {
     if (this.formPet.valid) {
       const pet = this.formPet.getRawValue();
       pet.image = this.image;
-      if (this.petService.updatePet( this.pet.id , pet)) {
+      if (this.petService.updatePet(this.pet.id, pet)) {
         this.formPet.reset();
         this.router.navigate(['./home/pet']).then();
       }
@@ -103,7 +108,67 @@ export class PetUpdateComponent implements OnInit {
     this.image = 'data:image/png;base64,' + btoa(e.target.result);
   }
 
+  // MEDLOG
+
+  refreshMedLogData(): void {
+    this.medLogs = this.medlogService.listMedLogsByPetId(this.pet.id);
+  }
+
   toggleUpdateMedlog(): void {
     this.update = !this.update;
+    // tslint:disable-next-line:no-unused-expression
+    this.formMedLog ? this.formMedLog.reset() : null;
+    this.medLogFormOn = false;
+  }
+
+  openFormMedLog(medLog?: MedLog): void {
+    this.formMedLog = new FormGroup({
+      tipo: new FormControl(medLog ? medLog.tipo : '', Validators.required),
+      desc: new FormControl(medLog ? medLog.desc : '', Validators.required),
+      data: new FormControl(medLog ? medLog.data : '', Validators.required),
+    });
+
+    this.medLog = medLog;
+
+    this.medLogFormOn = true;
+  }
+
+  cancelFormMedLog(): void {
+    // tslint:disable-next-line:no-unused-expression
+    this.formMedLog ? this.formMedLog.reset() : null;
+    this.medLogFormOn = false;
+  }
+
+  handleSubmitMedLog(): void {
+    if (this.formMedLog.valid) {
+      const medLogFormValues = this.formMedLog.getRawValue();
+      const medLog = this.medLog ? Object.assign(this.medLog, medLogFormValues) : medLogFormValues;
+      medLog.petId = this.pet.id;
+
+      if (medLog.id) {
+        this.medlogService.updateMedLog(medLog.id, medLog);
+      } else {
+        this.medlogService.createMedLog(medLog);
+      }
+
+      this.formMedLog.reset();
+      this.medLogFormOn = false;
+      this.refreshMedLogData();
+
+    } else {
+      this.formPet.markAllAsTouched();
+    }
+  }
+
+  get tipoMedLog(): any {
+    return this.formMedLog.get('tipo');
+  }
+
+  get descMedLog(): any {
+    return this.formMedLog.get('desc');
+  }
+
+  get dataMedLog(): any {
+    return this.formMedLog.get('data');
   }
 }
