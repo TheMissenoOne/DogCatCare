@@ -1,6 +1,19 @@
-<div class="div-services">
-
+<div class="div-center sub-title">
+  Nas Proximidades
 </div>
+<div class="div-services">
+  <carousel class="carousel-custom"
+  cellsToShow="1"
+  cellWidth="100%"
+  [arrows]="true"
+
+  >
+  <div class="carousel-cell" *ngFor="let serviceProvider of serviceProviders" (click)="viewServiceProvider(serviceProvider)">
+      <img [src]="serviceProvider.image">
+  </div>
+  </carousel>
+</div>
+
 
 
 <div class="div-center sub-title">

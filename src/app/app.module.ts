@@ -33,6 +33,9 @@ import { UserAccountComponent } from './modules/user/user-account/user-account.c
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
 import { AgmCoreModule } from '@agm/core';
+import { ServiceProviderComponent } from './modules/service/serviceProvider/serviceProvider.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +51,8 @@ import { AgmCoreModule } from '@agm/core';
     AgendaMainComponent,
     PetCreateComponent,
     PetUpdateComponent,
-    UserAccountComponent
+    UserAccountComponent,
+    ServiceProviderComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +76,8 @@ import { AgmCoreModule } from '@agm/core';
     FormsModule,
     AgmCoreModule.forRoot({
           apiKey: 'AIzaSyBP-RHgyCZFKceXxrl9EjPo4w2VdhE9kaM'
-        })
+        }),
+    IvyCarouselModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
