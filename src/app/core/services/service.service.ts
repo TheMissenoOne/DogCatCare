@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {Service} from '../../shared/models/service.model';
+import {Pet} from '../../shared/models/pet.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,26 +17,30 @@ export class ServiceService {
   services: Service[] = [
     {
       id: 1,
-      latitude: 123,
-      longitude: 123,
-      nome: 'Kiko',
-      tipo: 'PetShop',
-      desc: 'Vendemos os mais diversificados produtos para o seu bichinho.',
-      image: 'https://www.dataon.com.br/wp-content/uploads/2019/09/Como-montar-um-Petshop.jpg',
-  },
+      nome: 'Banho e Tosa',
+      preco: 'R$ 50,00',
+      serviceProviderId: 1
+    },
     {
       id: 2,
-      latitude: 123,
-      longitude: 123,
-      nome: 'Amigão',
-      tipo: 'PetShop',
-      desc: 'PetShop com banho e tosa.',
-      image: 'https://image.freepik.com/vetores-gratis/logotipo-de-petshop-para-gatos-e-caes_9645-750.jpg',
-    }
-  ];
+      nome: 'Banho',
+      preco: 'R$ 30,00',
+      serviceProviderId: 1
+    },
+    ];
 
   listAll(): Service[] {
     return this.services;
+  }
+
+  listByProviderId(providerId: number): Service[] {
+    const stored = this.listAll();
+    if (stored) {
+      const providers = stored.filter(obj => obj.serviceProviderId === providerId);
+      return providers;
+    }
+
+    return null;
   }
 
   findById(id: number): Service {

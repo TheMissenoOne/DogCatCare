@@ -1,5 +1,11 @@
 <div class="container">
-  <form [formGroup]="formService">
+
+  <mat-button-toggle-group class="max-width" [value]="view" (change)="toggleViewContratar()">
+    <mat-button-toggle [value]="true">Dados</mat-button-toggle>
+    <mat-button-toggle [value]="false">Serviços</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <form *ngIf="view" [formGroup]="formServiceProvider">
 
     <div class="div-image">
       <img id="image2" [src]="image"/>
@@ -23,10 +29,26 @@
 
     <div class="form-footer">
       <div>
-        <button class="button" mat-raised-button color="primary" type="submit">Contratar</button>
         <button class="button" mat-raised-button color="primary" type="button" routerLink="../">Voltar</button>
       </div>
     </div>
 
   </form>
+
+  <div *ngIf="!view" class="max-width">
+    <div class="div-service" *ngFor="let service of services" >
+      <span class="service">
+        <div class="service-body max-width">
+        <span>{{service.nome}}</span>
+          <span class="service-right">
+            <span>{{service.preco}}</span>
+            <i class="material-icons">
+          medical_services
+            </i>
+          </span>
+
+        </div>
+      </span>
+    </div>
+  </div>
 </div>

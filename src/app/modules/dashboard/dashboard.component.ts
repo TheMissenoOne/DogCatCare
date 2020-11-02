@@ -3,8 +3,8 @@ import {HeaderService} from '../../core/services/header.service';
 import {AgendaEvento} from '../../shared/models/agendaEvento.model';
 import {AgendaService} from '../../core/services/agenda.service';
 import {DatePipe} from '@angular/common';
-import {Service} from '../../shared/models/service.model';
-import {ServiceService} from '../../core/services/service.service';
+import {ServiceProvider} from '../../shared/models/serviceProvider.model';
+import {ServiceProviderService} from '../../core/services/serviceProvider.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -16,14 +16,14 @@ import {Router} from '@angular/router';
 export class DashboardComponent implements OnInit {
 
   eventos: AgendaEvento[];
-  services: Service[];
+  serviceProviders: ServiceProvider[];
   dataValue: Date;
   userId: number;
 
   constructor(
     private headerService: HeaderService,
     private agendaService: AgendaService,
-    private serviceService: ServiceService,
+    private serviceProviderService: ServiceProviderService,
     private router: Router,
     private datePipe: DatePipe
   ) {
@@ -48,11 +48,11 @@ export class DashboardComponent implements OnInit {
   }
 
   refreshDataServices(): void {
-    this.services = this.serviceService.listAll();
+    this.serviceProviders = this.serviceProviderService.listAll();
   }
 
-  viewService(service: Service): void {
-    this.serviceService.service = service;
-    this.router.navigate(['home/service']);
+  viewServiceProvider(serviceProvider: ServiceProvider): void {
+    this.serviceProviderService.serviceProvider = serviceProvider;
+    this.router.navigate(['home/serviceProvider']);
   }
 }

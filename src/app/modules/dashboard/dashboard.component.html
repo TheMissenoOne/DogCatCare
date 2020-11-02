@@ -8,8 +8,8 @@
   [arrows]="true"
 
   >
-  <div class="carousel-cell" *ngFor="let service of services" (click)="viewService(service)">
-      <img [src]="service.image">
+  <div class="carousel-cell" *ngFor="let serviceProvider of serviceProviders" (click)="viewServiceProvider(serviceProvider)">
+      <img [src]="serviceProvider.image">
   </div>
   </carousel>
 </div>
