@@ -22,11 +22,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   max-width: 468px;
 }
 
-button {
+.button {
   height: 48px;
 }
 
-button i {
+.button i {
   margin-right: 5px;
 }
 

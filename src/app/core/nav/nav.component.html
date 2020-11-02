@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-content">
-  <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true">
+  <mat-sidenav class="sidenav" mode="side" [opened]="navOn" fixedInViewport="true">
     <mat-nav-list class="nav-list">
 
       <a mat-list-item routerLink="dashboard">
@@ -50,6 +50,12 @@
     <app-header></app-header>
     <div class="content">
       <router-outlet></router-outlet>
+      <button mat-raised-button class="button-toggle-nav" (click)="toggleNav()" color="primary">
+        <i class="material-icons">
+          {{ navOn ? 'menu_open' : 'menu' }}
+        </i>
+      </button>
+
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

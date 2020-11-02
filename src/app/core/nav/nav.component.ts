@@ -8,6 +8,8 @@ import {Router} from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
+  navOn = true;
+
   constructor(
     private route: Router
   ) { }
@@ -19,4 +21,9 @@ export class NavComponent implements OnInit {
     localStorage.setItem('session', null);
     this.route.navigate(['']).then();
   }
+
+  toggleNav(): void {
+    this.navOn = !this.navOn;
+  }
+
 }

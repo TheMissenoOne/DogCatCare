@@ -49,8 +49,8 @@
       </span>
 
       <div *ngIf="!loading">
-        <button mat-raised-button color="primary" type="submit">Salvar</button>
-        <button mat-raised-button color="primary" type="button" routerLink="../">Cancelar</button>
+        <button class="button" mat-raised-button color="primary" type="submit">Salvar</button>
+        <button class="button" mat-raised-button color="primary" type="button" routerLink="../">Cancelar</button>
       </div>
     </div>
 
@@ -73,7 +73,7 @@
     </div>
 
     <div class="div-center">
-      <button [disabled]="medLogFormOn" (click)="openFormMedLog()" mat-raised-button color="primary" type="button">Novo
+      <button class="button" [disabled]="medLogFormOn" (click)="openFormMedLog()" mat-raised-button color="primary" type="button">Novo
       </button>
     </div>
 
@@ -104,8 +104,8 @@
       </mat-form-field>
 
       <div class="div-center">
-        <button mat-raised-button color="primary" type="submit" (click)="handleSubmitMedLog()">{{ medLog ? 'Salvar' : 'Adicionar' }}</button>
-        <button mat-raised-button color="primary" type="button" (click)="cancelFormMedLog()">Cancelar</button>
+        <button class="button" mat-raised-button color="primary" type="submit" (click)="handleSubmitMedLog()">{{ medLog ? 'Salvar' : 'Adicionar' }}</button>
+        <button class="button" mat-raised-button color="primary" type="button" (click)="cancelFormMedLog()">Cancelar</button>
       </div>
 
     </form>

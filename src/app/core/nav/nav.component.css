@@ -38,3 +38,21 @@
   bottom: 0;
   width: 100%;
 }
+
+.button-toggle-nav {
+  position: fixed;
+  bottom: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.button-toggle-nav {
+  max-width: 60px;
+}
+
+.mat-raised-button {
+  padding: 2px;
+  min-width: 48px;
+}
+
+
