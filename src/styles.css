@@ -210,3 +210,12 @@ mat-button-toggle {
   background-color: #0C3D45;
 }
 
+.custom-dialog-container .mat-dialog-container {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.carousel-custom {
+  width: 368px;
+}

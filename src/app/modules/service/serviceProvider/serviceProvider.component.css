@@ -82,3 +82,7 @@ button + button {
 .service-right i {
   margin-left: 5px;
 }
+
+.form-service {
+  margin-top: 10px;
+}

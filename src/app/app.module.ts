@@ -36,6 +36,7 @@ import { AgmCoreModule } from '@agm/core';
 import { ServiceProviderComponent } from './modules/service/serviceProvider/serviceProvider.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { PaymentComponent } from './modules/service/payment/payment.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     PetCreateComponent,
     PetUpdateComponent,
     UserAccountComponent,
-    ServiceProviderComponent
+    ServiceProviderComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
