@@ -2,7 +2,7 @@
   border-bottom: 1px solid #3F8270;
   background-color: #fff;
   height: 48px;
-  color: #3F8270;
+  color: #0C3D45;
 }
 
 .header {
@@ -14,10 +14,10 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #3F8270;
+  color: #0C3D45;
 }
 
 .header .title-group  i {
   padding-right: 5px;
-  color: #3F8270;
+  color: #0C3D45;
 }
