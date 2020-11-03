@@ -9,6 +9,7 @@ button + button {
 .form-footer {
   display: flex;
   justify-content: center;
+  background-color: #6fc6cec5
 }
 
 .form-evento {
@@ -27,6 +28,11 @@ button + button {
   color: #FFF;
   font-size: 16px;
   line-height: 16px;
+}
+
+
+.desc{
+  margin-left: 10px;
 }
 
 
