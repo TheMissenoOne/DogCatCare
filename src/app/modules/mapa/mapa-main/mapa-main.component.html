@@ -1,4 +1,21 @@
-
-<agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="place.lat" [longitude]="place.lng"  *ngFor="let place of places"><agm-info-window><h1>{{place.desc}}</h1></agm-info-window></agm-marker>
-</agm-map>
+<div class="map">
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="serviceProvider.latitude" [longitude]="serviceProvider.longitude"  *ngFor="let serviceProvider of serviceProviders">
+      <agm-info-window>
+        <h3>{{serviceProvider.tipo}}: {{serviceProvider.nome}} </h3>
+        <button class="button" mat-raised-button color="primary" (click)="viewServiceProvider(serviceProvider)" >Mais</button>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+  <input
+  class="searchInput"
+  type="text"
+  placeholder="Pick one"
+  aria-label="Number"
+  matInput
+  [matAutocomplete]="auto"
+  [value]="searchText">
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)=searchProvider($event.option.value)>
+    <mat-option *ngFor="let serviceProvider of serviceProviders" [value]="serviceProvider">{{serviceProvider.nome}}</mat-option>
+  </mat-autocomplete>
+</div>

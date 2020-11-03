@@ -16,8 +16,8 @@ export class ServiceProviderService {
   serviceProviders: ServiceProvider[] = [
     {
       id: 1,
-      latitude: 123,
-      longitude: 123,
+      latitude: -23.9684635,
+      longitude: -46.280415,
       nome: 'Kiko',
       tipo: 'PetShop',
       desc: 'Vendemos os mais diversificados produtos para o seu bichinho.',
@@ -25,8 +25,8 @@ export class ServiceProviderService {
   },
     {
       id: 2,
-      latitude: 123,
-      longitude: 123,
+      latitude: -23.2684635,
+      longitude: -46.240415,
       nome: 'Amigão',
       tipo: 'PetShop',
       desc: 'PetShop com banho e tosa.',

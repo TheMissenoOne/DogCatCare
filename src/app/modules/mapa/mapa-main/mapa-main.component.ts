@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServiceProviderService } from 'src/app/core/services/serviceProvider.service';
+import { ServiceProvider } from 'src/app/shared/models/serviceProvider.model';
 import {HeaderService} from '../../../core/services/header.service';
+
 
 @Component({
   selector: 'app-mapa-main',
@@ -7,22 +11,14 @@ import {HeaderService} from '../../../core/services/header.service';
   styleUrls: ['./mapa-main.component.css']
 })
 export class MapaMainComponent implements OnInit {
-  places = [{
-    desc : 'Casa',
-    lat : -23.9684635,
-    lng : -46.280415
-  },{
-    desc : 'Petshop',
-    lat : -22.93484635,
-    lng : -43.50415
-  },{
-    desc : 'Petshop 2',
-    lat : -24.9484635,
-    lng : -46.580415
-  }]
-  lat = this.places[0].lat
-  lng = this.places[0].lng
-  constructor( private headerService: HeaderService) {
+  searchText="";
+  lat = -23
+  lng = -46
+  serviceProviders: ServiceProvider[];
+  constructor(
+    private serviceProviderService: ServiceProviderService,
+    private router: Router,
+    private headerService: HeaderService) {
     this.headerService.headerData = {
       icon: 'map',
       pageTitle: 'Mapa',
@@ -31,7 +27,23 @@ export class MapaMainComponent implements OnInit {
     };
   }
 
+  viewServiceProvider(serviceProvider: ServiceProvider): void {
+    this.serviceProviderService.serviceProvider = serviceProvider;
+    this.router.navigate(['home/serviceProvider']);
+  }
+
+  searchProvider(serviceProvider: ServiceProvider){
+    this.searchText = serviceProvider.nome;
+    this.lat = serviceProvider.latitude;
+    this.lng = serviceProvider.longitude;
+
+  }
+
   ngOnInit(): void {
+    this.refreshDataServices();
+  }
+  refreshDataServices(): void {
+    this.serviceProviders = this.serviceProviderService.listAll();
   }
 
 }

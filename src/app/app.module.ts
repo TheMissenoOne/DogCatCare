@@ -35,6 +35,8 @@ import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
 import { AgmCoreModule } from '@agm/core';
 import { ServiceProviderComponent } from './modules/service/serviceProvider/serviceProvider.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 
 @NgModule({
   declarations: [
@@ -64,6 +66,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     MatCardModule,
     MatFormFieldModule,
     ReactiveFormsModule,
+    MatAutocompleteModule,
     MatProgressSpinnerModule,
     MatInputModule,
     MatButtonModule,

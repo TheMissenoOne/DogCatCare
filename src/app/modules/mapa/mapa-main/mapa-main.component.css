@@ -1,4 +1,13 @@
 agm-map {
-  height: 100vh;
+  height: 92.5vh;
 }
+.searchInput{
+  position: fixed;
+  top: 20vh;
+  left: 22vw;
+  height: 30px;
+  width: 60vw;
+  border-radius: 5px;
+}
+
 
