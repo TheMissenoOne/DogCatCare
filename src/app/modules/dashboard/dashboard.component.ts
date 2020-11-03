@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
   serviceProviders: ServiceProvider[];
   dataValue: Date;
   userId: number;
+  searchText="";
 
   constructor(
     private headerService: HeaderService,
@@ -50,6 +51,10 @@ export class DashboardComponent implements OnInit {
 
   refreshDataServices(): void {
     this.serviceProviders = this.serviceProviderService.listAll();
+  }
+
+  searchProvider(serviceProvider: ServiceProvider){
+    this.viewServiceProvider(serviceProvider);
   }
 
   viewServiceProvider(serviceProvider: ServiceProvider): void {

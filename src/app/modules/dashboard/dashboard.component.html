@@ -12,6 +12,20 @@
   </div>
   </carousel>
 </div>
+<div class="div-center">
+  <input
+class="searchInput"
+type="text"
+placeholder="Buscar Serviços"
+aria-label="Number"
+matInput
+[matAutocomplete]="auto"
+[value]="searchText">
+<mat-autocomplete #auto="matAutocomplete" (optionSelected)=searchProvider($event.option.value)>
+  <mat-option *ngFor="let serviceProvider of serviceProviders" [value]="serviceProvider">{{serviceProvider.nome}}</mat-option>
+</mat-autocomplete>
+</div>
+
 
 
 
