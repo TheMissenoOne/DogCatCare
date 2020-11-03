@@ -12,7 +12,7 @@ import {PetCreateComponent} from './modules/pet/pet-create/pet-create.component'
 import {PetUpdateComponent} from './modules/pet/pet-update/pet-update.component';
 import {VerifySessionService} from './core/services/verify-session.service';
 import {UserAccountComponent} from './modules/user/user-account/user-account.component';
-import {ServiceComponent} from './modules/service/service/service.component';
+import {ServiceProviderComponent} from './modules/service/serviceProvider/serviceProvider.component';
 
 const routes: Routes = [
   {
@@ -43,8 +43,8 @@ const routes: Routes = [
         component: PetListComponent
       },
       {
-        path: 'service',
-        component: ServiceComponent
+        path: 'serviceProvider',
+        component: ServiceProviderComponent
       },
       {
         path: 'pet/create',

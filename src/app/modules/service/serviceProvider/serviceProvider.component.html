@@ -1,0 +1,89 @@
+<div class="container">
+
+  <mat-button-toggle-group class="max-width" [value]="view" (change)="toggleViewContratar()">
+    <mat-button-toggle [value]="true">Dados</mat-button-toggle>
+    <mat-button-toggle [value]="false">Serviços</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <form *ngIf="view" [formGroup]="formServiceProvider">
+
+    <div class="div-image">
+      <img id="image2" [src]="image"/>
+    </div>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Tipo</mat-label>
+      <input matInput formControlName="tipo" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput formControlName="desc" readonly></textarea>
+    </mat-form-field>
+
+
+    <div class="form-footer">
+      <div>
+        <button class="button" mat-raised-button color="primary" type="button" routerLink="../">Voltar</button>
+      </div>
+    </div>
+
+  </form>
+
+  <div *ngIf="!view" class="max-width">
+    <div class="div-service" *ngFor="let service of services" (click)="openFormService(service)" >
+      <span class="service">
+        <div class="service-body max-width">
+        <span>{{service.nome}}</span>
+          <span class="service-right">
+            <span>{{service.preco}}</span>
+            <i class="material-icons">
+          medical_services
+            </i>
+          </span>
+
+        </div>
+      </span>
+    </div>
+  </div>
+
+
+  <form class="form-service" *ngIf="serviceFormOn" [formGroup]="formService">
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Serviço</mat-label>
+      <input matInput type="text" formControlName="desc" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Valor</mat-label>
+      <input matInput type="text" formControlName="preco" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Escolha a data</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="data" readonly required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #picker></mat-datepicker>
+      <mat-error *ngIf="data.invalid">Preencha a data</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Hora</mat-label>
+      <input matInput type="time" formControlName="hora" required>
+      <mat-error *ngIf="hora.invalid">Preencha a hora</mat-error>
+    </mat-form-field>
+
+
+    <div class="div-center">
+      <button class="button" mat-raised-button color="primary" type="submit" (click)="handleSubmitService()">Contratar</button>
+      <button class="button" mat-raised-button color="primary" type="button" (click)="cancelFormService()">Cancelar</button>
+    </div>
+
+  </form>
+</div>

@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "dog-cat-care"
+  "defaultProject": "dog-cat-care",
+  "cli": {
+    "analytics": "557f6642-0fe4-42ab-93ae-1e701ea8136b"
+  }
 }

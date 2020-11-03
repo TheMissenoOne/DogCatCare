@@ -32,8 +32,12 @@ import {MatSelectModule} from '@angular/material/select';
 import { UserAccountComponent } from './modules/user/user-account/user-account.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
-import { ServiceComponent } from './modules/service/service/service.component';
+import { AgmCoreModule } from '@agm/core';
+import { ServiceProviderComponent } from './modules/service/serviceProvider/serviceProvider.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { PaymentComponent } from './modules/service/payment/payment.component';
+
 
 @NgModule({
   declarations: [
@@ -51,7 +55,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     PetCreateComponent,
     PetUpdateComponent,
     UserAccountComponent,
-    ServiceComponent
+    ServiceProviderComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +68,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     MatCardModule,
     MatFormFieldModule,
     ReactiveFormsModule,
+    MatAutocompleteModule,
     MatProgressSpinnerModule,
     MatInputModule,
     MatButtonModule,
@@ -73,6 +79,9 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
+    AgmCoreModule.forRoot({
+          apiKey: 'AIzaSyBP-RHgyCZFKceXxrl9EjPo4w2VdhE9kaM'
+        }),
     IvyCarouselModule
   ],
   providers: [

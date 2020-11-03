@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  }
 
 .container {
   display: flex;
@@ -20,6 +20,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin: 0 auto;
   padding: 30px;
   max-width: 468px;
+}
+
+.text-center {
+  color: #FFFFFF;
+  text-align: center;
+  width: 100%;
 }
 
 .button {
@@ -44,7 +50,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   display: flex;
   align-items: center;
   padding: 20px;
-  color: #3F8270;
+  color: #0C3D45;
   font-weight: 500;
   font-size: 18px;
 }
@@ -59,25 +65,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .color-blue {
-  color: #3F8270;
+  color: #0C3D45;
 }
 
 .msg-success {
-  background-color: #3F8270;
-  color: #fff;
+  background-color: #0C3D45;
+  color: #AAEBFB;
 }
 
 .msg-success button {
-  color: #fff;
+  color: #AAEBFB;
 }
 
 .msg-error {
   background-color: #b53f3f;
-  color: #fff;
+  color: #AAEBFB;
 }
 
 .msg-error button {
-  color: #fff;
+  color: #AAEBFB;
 }
 
 .loading-small {
@@ -102,8 +108,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .content .icon > i {
-  color: #FFF;
-  background-color: #3F8270;
+  color: #AAEBFB;
+  background-color: #0C3D45;
   border-radius: 4px;
   padding: 1px;
 }
@@ -139,31 +145,31 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn {
   background-color: #b53f3f;
-  color: #FFFFFF;
+  color: #AAEBFB;
 }
 
 .mat-raised-button.mat-primary {
-  background-color: #3F8270;
+  background-color: #0C3D45;
 }
 
 .mat-focused .mat-form-field-label {
-  color: #3F8270;
+  color: #0C3D45;
 }
 
 .mat-form-field.mat-focused .mat-form-field-label {
-  color: #3F8270;
+  color: #0C3D45;
 }
 
 .mat-form-field-appearance-legacy .mat-form-field-label {
-  color: #3F8270;
+  color: #0C3D45;
 }
 
 .mat-focused .mat-form-field-underline .mat-form-field-ripple {
-  background: #3F8270;
+  background: #0C3D45;
 }
 
 .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-  color: #3F8270;
+  color: #0C3D45;
 }
 
 
@@ -182,25 +188,34 @@ mat-button-toggle {
 }
 
 .mat-button-toggle-checked {
-  background-color: #3F8270;
+  background-color: #0C3D45;
 }
 
 .mat-button-toggle-appearance-standard {
-  color: #3F8270;
+  color: #0C3D45;
 }
 
 .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
-  color: #fff;
+  color: #AAEBFB;
 }
 
 .mat-icon-button {
-  color: #3F8270;
+  color: #0C3D45;
 }
 .mat-form-field-label {
-  color: #3F8270;
+  color: #0C3D45;
 }
 
 .mat-calendar-body-selected {
-  background-color: #3F8270;
+  background-color: #0C3D45;
 }
 
+.custom-dialog-container .mat-dialog-container {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.carousel-custom {
+  width: 368px;
+}

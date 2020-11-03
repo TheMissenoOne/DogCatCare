@@ -1,6 +1,9 @@
 mat-card {
   max-width: 400px;
   text-align: center;
+  background-color: #07809ebb ;
+  height: 125%;
+  border-radius: 5px;
 }
 
 mat-card-header {
@@ -10,13 +13,19 @@ mat-card-header {
 
 mat-card-content {
   padding-top: 10px;
+
+
 }
 
 .signin-content {
+
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: end;
+  background:url(../../../../assets/dog-cat-food.jpg) no-repeat;
+  background-position: 30%;
+  background-size: cover;
 }
 
 .logo {
@@ -37,9 +46,15 @@ mat-button-toggle-group {
 }
 
 .form-footer {
-  margin-top: 20px;
+  margin-top: 5px;
 }
+
+
 
 form {
   max-width: 360px;
+  color: aliceblue;
+  font-size: large;
+
+
 }

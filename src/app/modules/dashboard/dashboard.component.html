@@ -4,15 +4,28 @@
 <div class="div-services">
   <carousel class="carousel-custom"
   cellsToShow="1"
-  cellWidth="100%"
   [arrows]="true"
 
   >
-  <div class="carousel-cell" *ngFor="let service of services" (click)="viewService(service)">
-      <img [src]="service.image">
+  <div class="carousel-cell" *ngFor="let serviceProvider of serviceProviders" (click)="viewServiceProvider(serviceProvider)">
+      <img [src]="serviceProvider.image">
   </div>
   </carousel>
 </div>
+<div class="div-center">
+  <input
+class="searchInput"
+type="text"
+placeholder="Buscar Serviços"
+aria-label="Number"
+matInput
+[matAutocomplete]="auto"
+[value]="searchText">
+<mat-autocomplete #auto="matAutocomplete" (optionSelected)=searchProvider($event.option.value)>
+  <mat-option *ngFor="let serviceProvider of serviceProviders" [value]="serviceProvider">{{serviceProvider.nome}}</mat-option>
+</mat-autocomplete>
+</div>
+
 
 
 
@@ -34,6 +47,17 @@
         </div>
       </span>
     </div>
+
+    <div class="div-evento" *ngIf="!eventos || eventos.length == 0" >
+      <span class="evento">
+        <div class="max-width text-center">
+          NENHUM EVENTO PARA HOJE
+        </div>
+      </span>
+    </div>
+
+
+
   </div>
 
 </div>

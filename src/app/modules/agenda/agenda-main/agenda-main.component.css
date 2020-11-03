@@ -9,6 +9,7 @@ button + button {
 .form-footer {
   display: flex;
   justify-content: center;
+  background-color: #6fc6cec5
 }
 
 .form-evento {
@@ -30,6 +31,11 @@ button + button {
 }
 
 
+.desc{
+  margin-left: 10px;
+}
+
+
 .evento {
   display: flex;
   width: 100%;
@@ -43,7 +49,7 @@ button + button {
   align-items: center;
   padding: 10px;
   border-radius: 4px;
-  background-color: #3F8270;
+  background-color: #0C3D45;
 }
 
 .div-evento img {
@@ -65,5 +71,5 @@ button + button {
 
 .div-evento:hover .evento-body {
   transition: color 400ms;
-  color: #3F8270;
+  color: #0C3D45;
 }
