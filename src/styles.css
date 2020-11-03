@@ -22,6 +22,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  }
   max-width: 468px;
 }
 
+.text-center {
+  color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+}
+
 .button {
   height: 48px;
 }

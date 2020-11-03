@@ -112,6 +112,7 @@ export class PetUpdateComponent implements OnInit {
 
   refreshMedLogData(): void {
     this.medLogs = this.medlogService.listMedLogsByPetId(this.pet.id);
+    console.log(this.medLogs);
   }
 
   toggleUpdateMedlog(): void {

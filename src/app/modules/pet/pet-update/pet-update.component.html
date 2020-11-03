@@ -72,6 +72,14 @@
       </span>
     </div>
 
+    <div *ngIf="!medLogs || medLogs.length == 0" class="div-medlog">
+      <span class="medlog">
+        <div class="medlog-body max-width">
+        <span>NENHUM REGISTRO MÉDICO</span>
+        </div>
+      </span>
+    </div>
+
     <div class="div-center">
       <button class="button" [disabled]="medLogFormOn" (click)="openFormMedLog()" mat-raised-button color="primary" type="button">Novo
       </button>

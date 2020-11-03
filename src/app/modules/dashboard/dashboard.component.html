@@ -4,7 +4,6 @@
 <div class="div-services">
   <carousel class="carousel-custom"
   cellsToShow="1"
-  cellWidth="100%"
   [arrows]="true"
 
   >
@@ -34,6 +33,16 @@
         </div>
       </span>
     </div>
+
+    <div class="div-evento" *ngIf="!eventos || eventos.length == 0" >
+      <span class="evento">
+        <div class="max-width text-center">
+          NENHUM EVENTO PARA HOJE
+        </div>
+      </span>
+    </div>
+
+
 
   </div>
 

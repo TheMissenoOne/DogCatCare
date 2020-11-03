@@ -45,6 +45,7 @@ export class DashboardComponent implements OnInit {
 
   refreshDataAgenda(): void {
     this.eventos = this.agendaService.listEventosByUserIdAndData(this.userId, this.datePipe.transform(this.dataValue , 'yyyy-MM-dd'));
+    console.log();
   }
 
   refreshDataServices(): void {
