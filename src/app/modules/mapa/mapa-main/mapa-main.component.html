@@ -7,15 +7,13 @@
       </agm-info-window>
     </agm-marker>
   </agm-map>
-  <input
-  class="searchInput"
-  type="text"
-  placeholder="Buscar Serviços/Prestadores"
-  aria-label="Number"
-  matInput
-  [matAutocomplete]="auto"
-  [value]="searchText">
-  <mat-autocomplete #auto="matAutocomplete" (optionSelected)=searchProvider($event.option.value)>
-    <mat-option *ngFor="let serviceProvider of serviceProviders" [value]="serviceProvider">{{serviceProvider.nome}}</mat-option>
-  </mat-autocomplete>
+      <input type="text"
+      class="searchInput"
+      placeholder="Buscar Prestadores de Serviços" matInput [formControl]="searchControl" [matAutocomplete]="auto" (optionSelected)=searchProvider($event.option.value)>
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)=searchProvider($event.option.value)>
+        <mat-option *ngFor="let serviceProvider of filteredOptions | async" [value]="serviceProvider">
+          {{serviceProvider}}
+        </mat-option>
+      </mat-autocomplete>
+
 </div>

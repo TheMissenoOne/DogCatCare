@@ -11,7 +11,7 @@
       <img id="image2" [src]="image" (click)="fileSelect.click()"/>
     </div>
 
-    <input type="file" #fileSelect hidden (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg"/>
+    <input type="file" #fileSelect hidden (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg" />
 
     <mat-form-field class="max-width" appearance="outline">
       <mat-label>Nome</mat-label>
@@ -19,10 +19,17 @@
       <mat-error *ngIf="nome.invalid">Preencha o nome</mat-error>
     </mat-form-field>
 
+
     <mat-form-field class="max-width" appearance="outline">
       <mat-label>Data de Nascimento</mat-label>
       <input matInput type="date" formControlName="dataNascimento" required>
       <mat-error *ngIf="dataNascimento.invalid">Preencha a data de nascimento</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Raça</mat-label>
+      <input matInput formControlName="raca" required>
+      <mat-error *ngIf="cor.invalid">Preencha a raça</mat-error>
     </mat-form-field>
 
     <mat-form-field class="max-width" appearance="outline">
@@ -33,7 +40,7 @@
 
     <mat-form-field class="max-width" appearance="outline">
       <mat-label>Tipo</mat-label>
-      <mat-select formControlName="tipo" required>
+      <mat-select formControlName="tipo"  required>
         <mat-option>--</mat-option>
         <mat-option *ngFor="let tipo of tipos" [value]="tipo">
           {{tipo}}
@@ -42,6 +49,52 @@
       <mat-error *ngIf="tipo.invalid">Selecione o tipo</mat-error>
     </mat-form-field>
 
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Temperamento</mat-label>
+      <mat-select formControlName="temperamento"  required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let temperamento of temperamentos" [value]="temperamento">
+          {{temperamento}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="temperamento.invalid">Selecione o temperamento</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Sexo</mat-label>
+      <mat-select formControlName="sexo"  required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let sexo of sexos" [value]="sexo">
+          {{sexo}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="sexo.invalid">Selecione o sexo</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Castrado</mat-label>
+      <mat-select formControlName="castrado"  required>
+        <mat-option *ngFor="let cond of conds" [value]="cond.value">
+          {{cond.label}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="sexo.invalid">Informe sobre a castração</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Chip</mat-label>
+      <mat-select formControlName="chip"  required>
+        <mat-option *ngFor="let cond of conds" [value]="cond.value">
+          {{cond.label}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="sexo.invalid">Informe sobre a presença de chip</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Necessidade especial ou observação</mat-label>
+      <textarea matInput formControlName="necessidadesMisc"></textarea>
+    </mat-form-field>
 
     <div class="form-footer">
       <span *ngIf="loading" class="loading-small">
@@ -49,7 +102,7 @@
       </span>
 
       <div *ngIf="!loading">
-        <button class="button" mat-raised-button color="primary" type="submit">Salvar</button>
+        <button class="button" mat-raised-button color="primary" type="submit">Atualizar</button>
         <button class="button" mat-raised-button color="primary" type="button" routerLink="../">Cancelar</button>
       </div>
     </div>

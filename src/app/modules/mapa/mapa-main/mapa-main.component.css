@@ -4,6 +4,7 @@ agm-map {
 .searchInput{
   position: fixed;
   background-color: white;
+  padding: 5px;
   top: 20vh;
   left: 22vw;
   height: 30px;

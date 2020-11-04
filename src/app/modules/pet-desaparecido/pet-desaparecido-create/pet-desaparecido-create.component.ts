@@ -19,7 +19,8 @@ export class PetDesaparecidoCreateComponent implements OnInit {
     nome: new FormControl('', Validators.required),
     tipo: new FormControl('', Validators.required),
     dataNascimento: new FormControl('', Validators.required),
-    cor: new FormControl('', Validators.required)
+    cor: new FormControl('', Validators.required),
+    necessidadesMisc: new FormControl()
   });
 
   tipos = ['Cachorro', 'Gato'];
@@ -30,10 +31,10 @@ export class PetDesaparecidoCreateComponent implements OnInit {
     private router: Router
   ) {
     this.headerService.headerData = {
-      icon: 'pets',
-      pageTitle: 'Adicionar Pet',
+      icon: 'location_city',
+      pageTitle: 'Adiconar Pet Desaparecido',
       routeUrl: 'pet',
-      title: 'Adicionar Pet'
+      title: 'Adiconar Pet Desaparecido'
     };
   }
 

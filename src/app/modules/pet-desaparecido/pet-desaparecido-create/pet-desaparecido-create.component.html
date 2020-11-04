@@ -36,7 +36,10 @@
       <mat-error *ngIf="tipo.invalid">Selecione o tipo</mat-error>
     </mat-form-field>
 
-
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Observação e Contato</mat-label>
+      <textarea matInput formControlName="necessidadesMisc"></textarea>
+    </mat-form-field>
     <div class="form-footer">
       <span *ngIf="loading" class="loading-small">
               <mat-spinner diameter="50"></mat-spinner>

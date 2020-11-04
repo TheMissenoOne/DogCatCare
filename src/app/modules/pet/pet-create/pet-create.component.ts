@@ -19,11 +19,19 @@ export class PetCreateComponent implements OnInit {
     nome: new FormControl('', Validators.required),
     tipo: new FormControl('', Validators.required),
     dataNascimento: new FormControl('', Validators.required),
-    cor: new FormControl('', Validators.required)
+    cor: new FormControl('', Validators.required),
+    sexo: new FormControl('', Validators.required),
+    raca: new FormControl('', Validators.required),
+    temperamento: new FormControl('', Validators.required),
+    castrado: new FormControl('', Validators.required),
+    chip: new FormControl('', Validators.required),
+    necessidadesMisc: new FormControl()
   });
 
   tipos = ['Cachorro', 'Gato'];
-
+  temperamentos = ['Agitado', 'Alegre', 'Amoroso', 'Bravo', 'Carente', 'Carinhoso', 'Dócil', 'Valente'];
+  conds = [{label: "Sim" ,value:true},{label: "Não" ,value:false}];
+  sexos =['Macho','Fêmea'];
   constructor(
     private headerService: HeaderService,
     private petService: PetService,
@@ -54,6 +62,30 @@ export class PetCreateComponent implements OnInit {
 
   get cor(): any {
     return this.formPet.get('cor');
+  }
+
+  get sexo(): any {
+    return this.formPet.get('sexo');
+  }
+
+  get temperamento(): any {
+    return this.formPet.get('temperamento');
+  }
+
+  get chip(): any {
+    return this.formPet.get('chip');
+  }
+
+  get raca(): any {
+    return this.formPet.get('raca');
+  }
+
+  get castrado(): any {
+    return this.formPet.get('castrado');
+  }
+
+  get necessidadesMisc(): any {
+    return this.formPet.get('necessidadesMisc');
   }
 
   handleSubmit(): void {

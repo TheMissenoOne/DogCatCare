@@ -6,4 +6,11 @@ export interface Pet {
   dataNascimento: string;
   image: string;
   userId: number;
+  sexo: string;
+  temperamento: string;
+  raca: string;
+  castrado: boolean;
+  chip: boolean;
+  necessidadesMisc: boolean;
+
 }

@@ -26,6 +26,9 @@ export class PetUpdateComponent implements OnInit {
   formMedLog: FormGroup;
 
   tipos = ['Cachorro', 'Gato'];
+  temperamentos = ['Agitado', 'Alegre', 'Amoroso', 'Bravo', 'Carente', 'Carinhoso', 'Dócil', 'Valente'];
+  conds = [{label: "Sim" ,value:true},{label: "Não" ,value:false}];
+  sexos =['Macho','Fêmea'];
   tiposMedLog = ['Vacina', 'Exame', 'Cirurgia'];
   update = true;
   medLogFormOn = false;
@@ -56,29 +59,61 @@ export class PetUpdateComponent implements OnInit {
         nome: new FormControl(this.pet.nome, Validators.required),
         tipo: new FormControl(this.pet.tipo, Validators.required),
         dataNascimento: new FormControl(this.pet.dataNascimento, Validators.required),
-        cor: new FormControl(this.pet.cor, Validators.required)
+        cor: new FormControl(this.pet.cor, Validators.required),
+        sexo: new FormControl(this.pet.sexo, Validators.required),
+        raca: new FormControl(this.pet.raca, Validators.required),
+        temperamento: new FormControl(this.pet.temperamento, Validators.required),
+        castrado: new FormControl(this.pet.castrado, Validators.required),
+        chip: new FormControl(this.pet.chip, Validators.required),
+        necessidadesMisc: new FormControl(this.pet.necessidadesMisc)
       });
+
+
     }
   }
 
   ngOnInit(): void {
       }
 
-  get nome(): any {
-    return this.formPet.get('nome');
-  }
+      get nome(): any {
+        return this.formPet.get('nome');
+      }
 
-  get tipo(): any {
-    return this.formPet.get('tipo');
-  }
+      get tipo(): any {
+        return this.formPet.get('tipo');
+      }
 
-  get dataNascimento(): any {
-    return this.formPet.get('dataNascimento');
-  }
+      get dataNascimento(): any {
+        return this.formPet.get('dataNascimento');
+      }
 
-  get cor(): any {
-    return this.formPet.get('cor');
-  }
+      get cor(): any {
+        return this.formPet.get('cor');
+      }
+
+      get sexo(): any {
+        return this.formPet.get('sexo');
+      }
+
+      get temperamento(): any {
+        return this.formPet.get('temperamento');
+      }
+
+      get chip(): any {
+        return this.formPet.get('chip');
+      }
+
+      get raca(): any {
+        return this.formPet.get('raca');
+      }
+
+      get castrado(): any {
+        return this.formPet.get('castrado');
+      }
+
+      get necessidadesMisc(): any {
+        return this.formPet.get('necessidadesMisc');
+      }
 
   handleSubmit(): void {
     if (this.formPet.valid) {

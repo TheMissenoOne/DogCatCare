@@ -6,6 +6,9 @@ import {DatePipe} from '@angular/common';
 import {ServiceProvider} from '../../shared/models/serviceProvider.model';
 import {ServiceProviderService} from '../../core/services/serviceProvider.service';
 import {Router} from '@angular/router';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,7 +19,10 @@ import {Router} from '@angular/router';
 export class DashboardComponent implements OnInit {
 
   eventos: AgendaEvento[];
+  searchControl = new FormControl();
   serviceProviders: ServiceProvider[];
+  filteredOptions: Observable<string[]>;
+  provs: string[] = [];
   dataValue: Date;
   userId: number;
   searchText="";
@@ -42,6 +48,20 @@ export class DashboardComponent implements OnInit {
     this.dataValue = new Date();
     this.refreshDataAgenda();
     this.refreshDataServices();
+
+    for (let index = 0; index < this.serviceProviders.length; index++) {
+      this.provs[this.provs.length] = this.serviceProviders[index].tipo+" - "+this.serviceProviders[index].nome;
+    }
+    this.filteredOptions = this.searchControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(value => this._filter(value))
+      );
+  }
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.provs.filter(provs => provs.toLowerCase().includes(filterValue));
   }
 
   refreshDataAgenda(): void {
@@ -53,8 +73,13 @@ export class DashboardComponent implements OnInit {
     this.serviceProviders = this.serviceProviderService.listAll();
   }
 
-  searchProvider(serviceProvider: ServiceProvider){
-    this.viewServiceProvider(serviceProvider);
+  searchProvider(serviceProviderName: string){
+    for (let index = 0; index < this.serviceProviders.length; index++) {
+      const element = this.serviceProviders[index];
+      if(element.nome == serviceProviderName.split(" - ")[1] && element.tipo == serviceProviderName.split(" - ")[0] ){
+        this.viewServiceProvider(element);
+      }
+    }
   }
 
   viewServiceProvider(serviceProvider: ServiceProvider): void {
