@@ -36,7 +36,7 @@ export class AgendaService {
     return null;
   }
 
-  async createEvento(evento: AgendaEvento, service?: string): boolean {
+  async createEvento(evento: AgendaEvento, service?: string): any {
     const eventosStored = this.listEventos();
     evento.id = eventosStored ? eventosStored.length + 1 : 1 ;
     if (eventosStored) {
