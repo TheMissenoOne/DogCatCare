@@ -33,7 +33,7 @@ export class PetDesaparecidoListComponent implements OnInit {
   }
 
   refreshData(): void {
-    this.pets = this.petService.listPetsByUserId(this.headerService.user.id);
+    this.pets = this.petService.listPets();
     this.petsOn = this.pets !== null;
   }
 

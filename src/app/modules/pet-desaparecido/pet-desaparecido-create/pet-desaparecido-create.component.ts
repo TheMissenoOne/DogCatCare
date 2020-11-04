@@ -64,7 +64,7 @@ export class PetDesaparecidoCreateComponent implements OnInit {
       pet.userId = this.headerService.user.id;
       if (this.petService.createPet(pet)) {
         this.formPet.reset();
-        this.router.navigate(['./home/pet']).then();
+        this.router.navigate(['./home/pet_desaparecido']).then();
       }
     } else {
       this.formPet.markAllAsTouched();

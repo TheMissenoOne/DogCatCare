@@ -11,36 +11,31 @@
 
     <mat-form-field class="max-width" appearance="outline">
       <mat-label>Nome</mat-label>
-      <input matInput formControlName="nome" required>
+      <input matInput formControlName="nome" readonly>
       <mat-error *ngIf="nome.invalid">Preencha o nome</mat-error>
     </mat-form-field>
 
     <mat-form-field class="max-width" appearance="outline">
-      <mat-label>Data de Nascimento</mat-label>
-      <input matInput type="date" formControlName="dataNascimento" required>
-      <mat-error *ngIf="dataNascimento.invalid">Preencha a data de nascimento</mat-error>
+      <mat-label>Data de Desaparecimento</mat-label>
+      <input matInput type="date" formControlName="dataNascimento" readonly>
+      <mat-error *ngIf="dataNascimento.invalid">Preencha a data de desaparecimento</mat-error>
     </mat-form-field>
 
     <mat-form-field class="max-width" appearance="outline">
       <mat-label>Cor</mat-label>
-      <input matInput formControlName="cor" required>
+      <input matInput formControlName="cor" readonly>
       <mat-error *ngIf="cor.invalid">Preencha a cor</mat-error>
     </mat-form-field>
 
     <mat-form-field class="max-width" appearance="outline">
       <mat-label>Tipo</mat-label>
-      <mat-select formControlName="tipo" required>
-        <mat-option>--</mat-option>
-        <mat-option *ngFor="let tipo of tipos" [value]="tipo">
-          {{tipo}}
-        </mat-option>
-      </mat-select>
+      <input matInput formControlName="tipo" readonly>
       <mat-error *ngIf="tipo.invalid">Selecione o tipo</mat-error>
     </mat-form-field>
 
     <mat-form-field class="max-width" appearance="outline">
       <mat-label>Observação e Contato</mat-label>
-      <textarea matInput formControlName="necessidadesMisc"></textarea>
+      <textarea matInput formControlName="necessidadesMisc" readonly></textarea>
     </mat-form-field>
 
 
