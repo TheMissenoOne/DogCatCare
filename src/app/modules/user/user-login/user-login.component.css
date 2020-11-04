@@ -1,14 +1,12 @@
 mat-card {
-  max-width: 400px;
   text-align: center;
   background-color: #07809ebb ;
-  height: 125%;
-  border-radius: 5px;
+  display:inline-block;
+  min-height: 100vh;
 }
 
 mat-card-header {
   border-bottom: 1px solid #3F8270;
-  margin-bottom: 10px;
 }
 
 mat-card-content {
@@ -52,7 +50,6 @@ mat-button-toggle-group {
 
 
 form {
-  max-width: 360px;
   color: aliceblue;
   font-size: large;
 

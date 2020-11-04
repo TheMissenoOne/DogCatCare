@@ -46,7 +46,7 @@ export class AgendaService {
     }
 
     if (service){
-      this.showMessage('Solicitação de serviço enviada com sucesso!', false);
+      this.showMessage('Solicitação de serviço enviada com sucesso! Aguardando aprovação..', false);
       await this.delay(15000);
       this.showMessage(service + ' contratado com sucesso!', false);
     } else {
