@@ -1,9 +1,5 @@
 <div class="container">
 
-  <mat-button-toggle-group class="max-width" [value]="update" (change)="toggleUpdateMedlog()">
-    <mat-button-toggle [value]="true">Dados</mat-button-toggle>
-    <mat-button-toggle [value]="false">Histórico Médico</mat-button-toggle>
-  </mat-button-toggle-group>
 
   <form *ngIf="update" [formGroup]="formPet" (ngSubmit)="handleSubmit()">
 
@@ -42,6 +38,11 @@
       <mat-error *ngIf="tipo.invalid">Selecione o tipo</mat-error>
     </mat-form-field>
 
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Observação e Contato</mat-label>
+      <textarea matInput formControlName="necessidadesMisc"></textarea>
+    </mat-form-field>
+
 
     <div class="form-footer">
       <span *ngIf="loading" class="loading-small">
@@ -49,8 +50,7 @@
       </span>
 
       <div *ngIf="!loading">
-        <button class="button" mat-raised-button color="primary" type="submit">Salvar</button>
-        <button class="button" mat-raised-button color="primary" type="button" routerLink="../">Cancelar</button>
+        <button class="button" mat-raised-button color="primary" type="button" routerLink="../">Voltar</button>
       </div>
     </div>
 
@@ -89,7 +89,7 @@
 
       <mat-form-field class="max-width" appearance="outline">
         <mat-label>Tipo</mat-label>
-        <mat-select formControlName="tipo" required>
+        <mat-select   formControlName="tipo" required>
           <mat-option>--</mat-option>
           <mat-option *ngFor="let tipo of tiposMedLog" [value]="tipo">
             {{tipo}}
@@ -100,7 +100,7 @@
 
       <mat-form-field class="max-width" appearance="outline">
         <mat-label>Descrição</mat-label>
-        <input matInput formControlName="desc" required>
+        <input  matInput formControlName="desc" required readonly>
         <mat-error *ngIf="descMedLog.invalid">Preencha a descrição</mat-error>
       </mat-form-field>
 
@@ -112,8 +112,8 @@
       </mat-form-field>
 
       <div class="div-center">
-        <button class="button" mat-raised-button color="primary" type="submit" (click)="handleSubmitMedLog()">{{ medLog ? 'Salvar' : 'Adicionar' }}</button>
-        <button class="button" mat-raised-button color="primary" type="button" (click)="cancelFormMedLog()">Cancelar</button>
+
+        <button class="button" mat-raised-button color="primary" type="button" (click)="cancelFormMedLog()">Voltar</button>
       </div>
 
     </form>

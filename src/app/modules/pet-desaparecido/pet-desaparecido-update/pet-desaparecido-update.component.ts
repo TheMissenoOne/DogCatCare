@@ -56,7 +56,9 @@ export class PetDesaparecidoUpdateComponent implements OnInit {
         nome: new FormControl(this.pet.nome, Validators.required),
         tipo: new FormControl(this.pet.tipo, Validators.required),
         dataNascimento: new FormControl(this.pet.dataNascimento, Validators.required),
-        cor: new FormControl(this.pet.cor, Validators.required)
+        cor: new FormControl(this.pet.cor, Validators.required),
+        necessidadesMisc: new FormControl(this.pet.necessidadesMisc)
+
       });
     }
   }

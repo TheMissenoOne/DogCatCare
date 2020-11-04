@@ -56,7 +56,7 @@ export class ServiceProviderService {
       longitude: -46.3415,
       nome: 'PetCenter',
       tipo: 'PetShop',
-      desc: 'Produtos e artigos para pets.',
+      desc: 'Diversos serviços para seu pet',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOUBpO-Dxjlo3-ffD8SxlpA2iVi0eibCLHYw&usqp=CAU',
     },
     {

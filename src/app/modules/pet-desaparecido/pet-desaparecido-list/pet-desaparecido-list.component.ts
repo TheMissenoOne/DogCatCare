@@ -39,6 +39,6 @@ export class PetDesaparecidoListComponent implements OnInit {
 
   updatePet(pet: Pet): void {
     this.petService.pet = pet;
-    this.router.navigate(['home/pet/update']).then();
+    this.router.navigate(['home/pet_desaparecido/update']).then();
   }
 }

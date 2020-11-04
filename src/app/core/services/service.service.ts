@@ -53,20 +53,20 @@ export class ServiceService {
     },
     {
       id: 7,
-      nome: 'Ração Cão 5Kg',
+      nome: 'Tosa',
       preco: 'R$ 29,00',
       serviceProviderId: 5
     },
     {
       id: 8,
-      nome: 'Ração Gato 5Kg',
+      nome: 'Banho',
       preco: 'R$ 19,00',
       serviceProviderId: 5
     },
     {
       id: 9,
-      nome: 'Areia para Gato 2Kg',
-      preco: 'R$ 5,00',
+      nome: '20 min passseio',
+      preco: 'R$ 10,00',
       serviceProviderId: 5
     },
     {

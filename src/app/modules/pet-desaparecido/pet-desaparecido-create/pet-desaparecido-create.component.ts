@@ -33,7 +33,7 @@ export class PetDesaparecidoCreateComponent implements OnInit {
     this.headerService.headerData = {
       icon: 'location_city',
       pageTitle: 'Adiconar Pet Desaparecido',
-      routeUrl: 'pet',
+      routeUrl: 'pet_desaparecido',
       title: 'Adiconar Pet Desaparecido'
     };
   }
