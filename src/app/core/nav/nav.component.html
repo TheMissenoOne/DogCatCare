@@ -14,6 +14,12 @@
         </i>
       </a>
 
+      <a mat-list-item (click)="pageOn = 'pet_desaparecido'" routerLink="pet_desaparecido" [class]="pageOn == 'pet_desaparecido' && route.url != '/home/dashboard' ? 'page-selected' : ''">
+        <i class="material-icons">
+          pets
+        </i>
+      </a>
+
       <a mat-list-item (click)="pageOn = 'mapa'" routerLink="mapa" [class]="pageOn == 'mapa' && route.url != '/home/dashboard' ? 'page-selected' : ''">
         <i class="material-icons">
           map
@@ -29,6 +35,12 @@
       <a mat-list-item (click)="pageOn = 'assistente'" routerLink="assistente" [class]="pageOn == 'assistente' && route.url != '/home/dashboard' ? 'page-selected' : ''">
         <i class="material-icons">
           android
+        </i>
+      </a>
+
+      <a mat-list-item (click)="pageOn = 'sobre'" routerLink="sobre" [class]="pageOn == 'sobre' && route.url != '/home/dashboard' ? 'page-selected' : ''">
+        <i class="material-icons">
+          info
         </i>
       </a>
 

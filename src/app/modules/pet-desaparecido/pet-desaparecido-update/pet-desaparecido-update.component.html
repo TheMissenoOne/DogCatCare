@@ -1,0 +1,123 @@
+<div class="container">
+
+  <mat-button-toggle-group class="max-width" [value]="update" (change)="toggleUpdateMedlog()">
+    <mat-button-toggle [value]="true">Dados</mat-button-toggle>
+    <mat-button-toggle [value]="false">Histórico Médico</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <form *ngIf="update" [formGroup]="formPet" (ngSubmit)="handleSubmit()">
+
+    <div class="div-image">
+      <img id="image2" [src]="image" (click)="fileSelect.click()"/>
+    </div>
+
+    <input type="file" #fileSelect hidden (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg"/>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" required>
+      <mat-error *ngIf="nome.invalid">Preencha o nome</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Data de Nascimento</mat-label>
+      <input matInput type="date" formControlName="dataNascimento" required>
+      <mat-error *ngIf="dataNascimento.invalid">Preencha a data de nascimento</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Cor</mat-label>
+      <input matInput formControlName="cor" required>
+      <mat-error *ngIf="cor.invalid">Preencha a cor</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Tipo</mat-label>
+      <mat-select formControlName="tipo" required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let tipo of tipos" [value]="tipo">
+          {{tipo}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="tipo.invalid">Selecione o tipo</mat-error>
+    </mat-form-field>
+
+
+    <div class="form-footer">
+      <span *ngIf="loading" class="loading-small">
+              <mat-spinner diameter="50"></mat-spinner>
+      </span>
+
+      <div *ngIf="!loading">
+        <button class="button" mat-raised-button color="primary" type="submit">Salvar</button>
+        <button class="button" mat-raised-button color="primary" type="button" routerLink="../">Cancelar</button>
+      </div>
+    </div>
+
+  </form>
+
+  <!-- MEDLOG -->
+  <div *ngIf="!update" class="max-width">
+
+    <div class="div-medlog" *ngFor="let medLog of medLogs" (click)="openFormMedLog(medLog)">
+      <span class="medlog">
+        <img [src]="pet.image">
+        <div class="medlog-body max-width">
+        <span>{{medLog.tipo + ':  ' + medLog.desc}}</span>
+        <span>{{medLog.data | date: 'dd/MM/yyyy'}}</span>
+          <i class="material-icons">
+        medical_services
+          </i>
+        </div>
+      </span>
+    </div>
+
+    <div *ngIf="!medLogs || medLogs.length == 0" class="div-medlog">
+      <span class="medlog">
+        <div class="medlog-body max-width">
+        <span>NENHUM REGISTRO MÉDICO</span>
+        </div>
+      </span>
+    </div>
+
+    <div class="div-center">
+      <button class="button" [disabled]="medLogFormOn" (click)="openFormMedLog()" mat-raised-button color="primary" type="button">Novo
+      </button>
+    </div>
+
+    <form *ngIf="medLogFormOn" [formGroup]="formMedLog" class="form-med-log">
+
+      <mat-form-field class="max-width" appearance="outline">
+        <mat-label>Tipo</mat-label>
+        <mat-select formControlName="tipo" required>
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let tipo of tiposMedLog" [value]="tipo">
+            {{tipo}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="tipoMedLog.invalid">Selecione o tipo</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="max-width" appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <input matInput formControlName="desc" required>
+        <mat-error *ngIf="descMedLog.invalid">Preencha a descrição</mat-error>
+      </mat-form-field>
+
+
+      <mat-form-field class="max-width" appearance="outline">
+        <mat-label>Data</mat-label>
+        <input matInput type="date" formControlName="data" required>
+        <mat-error *ngIf="dataMedLog.invalid">Preencha a data</mat-error>
+      </mat-form-field>
+
+      <div class="div-center">
+        <button class="button" mat-raised-button color="primary" type="submit" (click)="handleSubmitMedLog()">{{ medLog ? 'Salvar' : 'Adicionar' }}</button>
+        <button class="button" mat-raised-button color="primary" type="button" (click)="cancelFormMedLog()">Cancelar</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

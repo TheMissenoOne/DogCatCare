@@ -37,6 +37,10 @@ import { ServiceProviderComponent } from './modules/service/serviceProvider/serv
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { PaymentComponent } from './modules/service/payment/payment.component';
+import {PetDesaparecidoCreateComponent} from './modules/pet-desaparecido/pet-desaparecido-create/pet-desaparecido-create.component';
+import {PetDesaparecidoUpdateComponent} from './modules/pet-desaparecido/pet-desaparecido-update/pet-desaparecido-update.component';
+import {PetDesaparecidoListComponent} from './modules/pet-desaparecido/pet-desaparecido-list/pet-desaparecido-list.component';
+import { SobreComponent } from './modules/sobre/sobre.component';
 
 
 @NgModule({
@@ -49,14 +53,18 @@ import { PaymentComponent } from './modules/service/payment/payment.component';
     AssistenteComponent,
     HeaderComponent,
     DashboardComponent,
-    PetListComponent,
     MapaMainComponent,
     AgendaMainComponent,
     PetCreateComponent,
     PetUpdateComponent,
+    PetListComponent,
+    PetDesaparecidoCreateComponent,
+    PetDesaparecidoUpdateComponent,
+    PetDesaparecidoListComponent,
     UserAccountComponent,
     ServiceProviderComponent,
-    PaymentComponent
+    PaymentComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,

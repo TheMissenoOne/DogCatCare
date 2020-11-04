@@ -13,6 +13,10 @@ import {PetUpdateComponent} from './modules/pet/pet-update/pet-update.component'
 import {VerifySessionService} from './core/services/verify-session.service';
 import {UserAccountComponent} from './modules/user/user-account/user-account.component';
 import {ServiceProviderComponent} from './modules/service/serviceProvider/serviceProvider.component';
+import {PetDesaparecidoListComponent} from './modules/pet-desaparecido/pet-desaparecido-list/pet-desaparecido-list.component';
+import {PetDesaparecidoCreateComponent} from './modules/pet-desaparecido/pet-desaparecido-create/pet-desaparecido-create.component';
+import {PetDesaparecidoUpdateComponent} from './modules/pet-desaparecido/pet-desaparecido-update/pet-desaparecido-update.component';
+import {SobreComponent} from './modules/sobre/sobre.component';
 
 const routes: Routes = [
   {
@@ -43,12 +47,12 @@ const routes: Routes = [
         component: AssistenteComponent
       },
       {
-        path: 'pet',
-        component: PetListComponent
-      },
-      {
         path: 'serviceProvider',
         component: ServiceProviderComponent
+      },
+      {
+        path: 'pet',
+        component: PetListComponent
       },
       {
         path: 'pet/create',
@@ -59,12 +63,28 @@ const routes: Routes = [
         component: PetUpdateComponent
       },
       {
+        path: 'pet_desaparecido',
+        component: PetDesaparecidoListComponent
+      },
+      {
+        path: 'pet_desaparecido/create',
+        component: PetDesaparecidoCreateComponent
+      },
+      {
+        path: 'pet_desaparecido/update',
+        component: PetDesaparecidoUpdateComponent
+      },
+      {
         path: 'agenda',
         component: AgendaMainComponent
       },
       {
         path: 'mapa',
         component: MapaMainComponent
+      },
+      {
+        path: 'sobre',
+        component: SobreComponent
       },
       {
         path: '**',

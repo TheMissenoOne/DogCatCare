@@ -1,0 +1,26 @@
+button {
+  margin-top: 10px;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.div-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.div-image img {
+  border-radius: 50%;
+
+  width: 180px;
+  height: 180px;
+}
+
