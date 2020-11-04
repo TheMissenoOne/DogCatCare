@@ -35,6 +35,10 @@ const routes: Routes = [
         component: UserAccountComponent
       },
       {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
         path: 'assistente',
         component: AssistenteComponent
       },
@@ -64,7 +68,7 @@ const routes: Routes = [
       },
       {
         path: '**',
-        component: DashboardComponent
+        redirectTo: 'dashboard'
       },
     ]
   }

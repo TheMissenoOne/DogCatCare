@@ -36,7 +36,7 @@ export class AgendaService {
     return null;
   }
 
-  createEvento(evento: AgendaEvento, service?: string): boolean {
+  async createEvento(evento: AgendaEvento, service?: string): boolean {
     const eventosStored = this.listEventos();
     evento.id = eventosStored ? eventosStored.length + 1 : 1 ;
     if (eventosStored) {
@@ -44,8 +44,20 @@ export class AgendaService {
     } else {
       localStorage.setItem('agenda', JSON.stringify([ evento ]));
     }
-    this.showMessage((service ? service + ' contratado' : 'Evento cadastrado') + ' com sucesso!', false);
+
+    if (service){
+      this.showMessage('Solicitação de serviço enviada com sucesso!', false);
+      await this.delay(10000);
+      this.showMessage(service + ' contratado com sucesso!', false);
+    } else {
+      this.showMessage('Evento cadastrado com sucesso!', false);
+    }
+
     return true;
+  }
+
+  delay(ms: number): any {
+    return new Promise( resolve => setTimeout(resolve, ms) );
   }
 
   updateEvento(id: number, evento: AgendaEvento): boolean {

@@ -48,13 +48,13 @@
       <form [formGroup]="formRegister" (ngSubmit)="handleRegister()" *ngIf="!login">
 
         <mat-form-field class="max-width">
-          <input matInput placeholder="Nome" formControlName="nome" required>
-          <mat-error *ngIf="nomeRegister.invalid">Preencha o seu nome</mat-error>
+          <input matInput placeholder="Nome/Razão Social" formControlName="nome" required>
+          <mat-error *ngIf="nomeRegister.invalid">Preencha o seu nome/razão social</mat-error>
         </mat-form-field>
 
         <mat-form-field class="max-width">
-          <input matInput placeholder="CPF" formControlName="cpf" required>
-          <mat-error *ngIf="cpfRegister.invalid">Preencha o seu CPF</mat-error>
+          <input matInput placeholder="CPF/CNPJ" formControlName="cpf" required>
+          <mat-error *ngIf="cpfRegister.invalid">Preencha o seu CPF/CNPJ</mat-error>
         </mat-form-field>
 
         <mat-form-field class="max-width">

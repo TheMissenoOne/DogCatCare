@@ -30,9 +30,9 @@ export class DashboardComponent implements OnInit {
   ) {
     this.headerService.headerData = {
       icon: 'home',
-      pageTitle: 'Dashboard',
+      pageTitle: 'Início',
       routeUrl: 'dashboard',
-      title: 'Dashboard'
+      title: 'Início'
     };
 
     this.userId = this.headerService.user.id;

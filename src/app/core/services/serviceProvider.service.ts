@@ -20,7 +20,7 @@ export class ServiceProviderService {
       longitude: -46.280415,
       nome: 'Kiko',
       tipo: 'PetShop',
-      desc: 'Vendemos os mais diversificados produtos para o seu bichinho.',
+      desc: 'Os mais diversos serviços para o seu bichinho.',
       image: 'https://www.dataon.com.br/wp-content/uploads/2019/09/Como-montar-um-Petshop.jpg',
   },
     {
@@ -65,7 +65,7 @@ export class ServiceProviderService {
       longitude: -46.8415,
       nome: 'Pousada Miau',
       tipo: 'PetHotel',
-      desc: 'Um hotel para hospeda seu pet quando precisar.',
+      desc: 'Um hotel para hospedar seu pet quando precisar.',
       image: 'https://media.istockphoto.com/vectors/pet-hotel-vector-id519164038?b=1&k=6&m=519164038&s=612x612&w=0&h=LJqhjJ6OVgkhzG787hLLv6YF4-RIluOYbg5WQhMHXqE=',
     }
 

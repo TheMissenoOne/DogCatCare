@@ -55,4 +55,16 @@
   min-width: 48px;
 }
 
+.page-selected {
+  background: #08272b;
+}
+.page-selected:focus {
+  background: #08272b !important;
+}
+
+.mat-nav-list .mat-list-item:hover {
+  background: #08272b !important;
+}
+
+
 

@@ -79,9 +79,11 @@ export class ServiceProviderComponent implements OnInit {
   }
 
   openFormService(service: Service): void {
+
     this.formService = new FormGroup({
       desc: new FormControl(service.nome, Validators.required),
       preco: new FormControl(service.preco, Validators.required),
+      observacao: new FormControl('', []),
       data: new FormControl('', Validators.required),
       hora: new FormControl('', Validators.required),
     });
@@ -110,8 +112,6 @@ export class ServiceProviderComponent implements OnInit {
       const data = {eventoFormValues, evento};
 
       this.openPaymentModal(data);
-
-      //this.agendaService.createEvento(evento, evento.desc);
 
       this.formService.reset();
       this.serviceFormOn = false;

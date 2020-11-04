@@ -66,6 +66,11 @@
     </mat-form-field>
 
     <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Observações</mat-label>
+      <textarea matInput type="text" formControlName="observacao"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="max-width" appearance="outline">
       <mat-label>Escolha a data</mat-label>
       <input matInput [matDatepicker]="picker" formControlName="data" readonly required>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>

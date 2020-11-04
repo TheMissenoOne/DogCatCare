@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 export class NavComponent implements OnInit {
 
   navOn = true;
+  pageOn = 'dashboard';
 
   constructor(
     private route: Router

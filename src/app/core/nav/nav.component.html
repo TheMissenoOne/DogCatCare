@@ -2,38 +2,38 @@
   <mat-sidenav class="sidenav" mode="side" [opened]="navOn" fixedInViewport="true">
     <mat-nav-list class="nav-list">
 
-      <a mat-list-item routerLink="dashboard">
+      <a mat-list-item (click)="pageOn = 'dashboard'" routerLink="dashboard" [class]="route.url == '/home/dashboard' ? 'page-selected': ''">
         <i class="material-icons">
           home
         </i>
       </a>
 
-      <a mat-list-item routerLink="pet">
+      <a mat-list-item (click)="pageOn = 'pet'" routerLink="pet" [class]="pageOn == 'pet' && route.url != '/home/dashboard' ? 'page-selected' : ''">
         <i class="material-icons">
           pets
         </i>
       </a>
 
-      <a mat-list-item routerLink="mapa">
+      <a mat-list-item (click)="pageOn = 'mapa'" routerLink="mapa" [class]="route.url == '/home/mapa' && route.url != '/home/dashboard' ? 'page-selected' : ''">
         <i class="material-icons">
           map
         </i>
       </a>
 
-      <a mat-list-item routerLink="agenda">
+      <a mat-list-item (click)="pageOn = 'agenda'" routerLink="agenda" [class]="route.url == '/home/agenda' && route.url != '/home/dashboard' ? 'page-selected' : ''">
         <i class="material-icons">
           event_note
         </i>
       </a>
 
-      <a mat-list-item routerLink="assistente" >
+      <a mat-list-item (click)="pageOn = 'assistente'" routerLink="assistente" [class]="route.url == '/home/assistente' && route.url != '/home/dashboard' ? 'page-selected' : ''">
         <i class="material-icons">
           android
         </i>
       </a>
 
       <div class="footer">
-        <a mat-list-item routerLink="account">
+        <a mat-list-item (click)="pageOn = 'account'" routerLink="account" [class]="route.url == '/home/account' && route.url != '/home/dashboard' ? 'page-selected' : ''">
           <i class="material-icons">
             person
           </i>

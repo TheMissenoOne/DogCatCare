@@ -16,7 +16,7 @@
   <input
 class="searchInput"
 type="text"
-placeholder="Buscar Serviços"
+placeholder="Buscar Serviços/Prestadores"
 aria-label="Number"
 matInput
 [matAutocomplete]="auto"
@@ -38,12 +38,7 @@ matInput
       <span class="evento">
         <div class="evento-body max-width">
           <span>{{evento.hora}}</span>
-          <span>{{evento.desc}}</span>
-
-            <i class="material-icons">
-          medical_services
-            </i>
-
+          <span class="max-width text-center">{{evento.desc}}</span>
         </div>
       </span>
     </div>
