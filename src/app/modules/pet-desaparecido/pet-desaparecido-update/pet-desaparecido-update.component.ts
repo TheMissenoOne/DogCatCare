@@ -46,7 +46,7 @@ export class PetDesaparecidoUpdateComponent implements OnInit {
     this.pet = this.petService.pet;
 
     if (typeof this.pet === 'undefined') {
-      this.router.navigate(['home/pet']).then();
+      this.router.navigate(['home/pet_desaparecido']).then();
     } else {
       this.refreshMedLogData();
 
@@ -88,7 +88,7 @@ export class PetDesaparecidoUpdateComponent implements OnInit {
       pet.image = this.image;
       if (this.petService.updatePet(this.pet.id, pet)) {
         this.formPet.reset();
-        this.router.navigate(['./home/pet']).then();
+        this.router.navigate(['./home/pet_desaparecido']).then();
       }
     } else {
       this.formPet.markAllAsTouched();
