@@ -36,7 +36,7 @@ export class AgendaService {
     return null;
   }
 
-  async createEvento(evento: AgendaEvento, service?: string): any {
+  async createEvento(evento: AgendaEvento, service?: string): Promise<any> {
     const eventosStored = this.listEventos();
     evento.id = eventosStored ? eventosStored.length + 1 : 1 ;
     if (eventosStored) {
@@ -47,7 +47,7 @@ export class AgendaService {
 
     if (service){
       this.showMessage('Solicitação de serviço enviada com sucesso!', false);
-      await this.delay(10000);
+      await this.delay(15000);
       this.showMessage(service + ' contratado com sucesso!', false);
     } else {
       this.showMessage('Evento cadastrado com sucesso!', false);
