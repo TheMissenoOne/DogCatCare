@@ -67,7 +67,26 @@ export class ServiceProviderService {
       tipo: 'PetHotel',
       desc: 'Um hotel para hospedar seu pet quando precisar.',
       image: 'https://media.istockphoto.com/vectors/pet-hotel-vector-id519164038?b=1&k=6&m=519164038&s=612x612&w=0&h=LJqhjJ6OVgkhzG787hLLv6YF4-RIluOYbg5WQhMHXqE=',
+    },
+    {
+      id: 7,
+      latitude: -23.323835,
+      longitude: -46.2415,
+      nome: 'Renata Santos',
+      tipo: 'Cuidador',
+      desc: 'Farei companhia e cuidarei do seu pet',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ87NSZbqYcyszVSPuKu6ayIt9kmvwvG7nG6w&usqp=CAU',
+    },
+    {
+      id: 8,
+      latitude: -23.3232835,
+      longitude: -46.24515,
+      nome: 'Renan Tavares',
+      tipo: 'Veterinário',
+      desc: 'Cuide da saúde e garanta o bem estar do seu pet conosco',
+      image: 'https://static.vecteezy.com/system/resources/previews/000/123/775/original/free-vet-elements-vector.jpg',
     }
+
 
   ];
 

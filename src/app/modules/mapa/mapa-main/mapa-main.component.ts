@@ -20,6 +20,8 @@ export class MapaMainComponent implements OnInit {
   searchControl = new FormControl();
   serviceProviders: ServiceProvider[];
   filteredOptions: Observable<string[]>;
+  infoWindowOpened = null
+  previous_info_window = null
   provs: string[] = [];
 
   constructor(
@@ -33,6 +35,23 @@ export class MapaMainComponent implements OnInit {
       title: 'Mapa'
     };
   }
+
+  close_window(){
+    if (this.previous_info_window != null ) {
+      this.previous_info_window.close()
+      }
+    }
+  focusMap(infoWindow){
+
+    if (this.previous_info_window == null)
+     this.previous_info_window = infoWindow;
+    else{
+     this.infoWindowOpened = infoWindow
+     this.previous_info_window.close()
+    }
+    this.previous_info_window = infoWindow
+  }
+
 
   viewServiceProvider(serviceProvider: ServiceProvider): void {
     this.serviceProviderService.serviceProvider = serviceProvider;

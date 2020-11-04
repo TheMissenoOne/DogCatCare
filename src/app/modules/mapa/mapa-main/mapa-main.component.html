@@ -1,7 +1,7 @@
 <div class="map">
-  <agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="serviceProvider.latitude" [longitude]="serviceProvider.longitude"  *ngFor="let serviceProvider of serviceProviders">
-      <agm-info-window>
+  <agm-map  [latitude]="lat" [longitude]="lng" (mapClick)="close_window()">
+    <agm-marker #marker (markerClick)="focusMap(infoWindow)" [latitude]="serviceProvider.latitude" [longitude]="serviceProvider.longitude"  *ngFor="let serviceProvider of serviceProviders">
+      <agm-info-window #infoWindow>
         <h3>{{serviceProvider.tipo}}: {{serviceProvider.nome}} </h3>
         <button class="button" mat-raised-button color="primary" (click)="viewServiceProvider(serviceProvider)" >Mais</button>
       </agm-info-window>

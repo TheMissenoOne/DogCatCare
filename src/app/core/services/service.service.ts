@@ -87,6 +87,36 @@ export class ServiceService {
       preco: 'R$ 100,00',
       serviceProviderId: 6
     },
+    {
+      id: 13,
+      nome: '1 Horaa',
+      preco: 'R$ 40,00',
+      serviceProviderId: 7
+    },
+    {
+      id: 14,
+      nome: 'Espediente completo (9:00 ás 17:00)',
+      preco: 'R$ 200,00',
+      serviceProviderId: 7
+    },
+    {
+      id: 15,
+      nome: 'Consulta',
+      preco: 'R$ 25,00',
+      serviceProviderId: 8
+    },
+    {
+      id: 16,
+      nome: 'Procedimento Simples',
+      preco: 'R$ 300,00',
+      serviceProviderId: 8
+    },
+    {
+      id: 17,
+      nome: 'Castração',
+      preco: 'R$ 750,00',
+      serviceProviderId: 8
+    },
     ];
 
   listAll(): Service[] {
