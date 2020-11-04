@@ -12,7 +12,7 @@ export class NavComponent implements OnInit {
   pageOn = 'dashboard';
 
   constructor(
-    private route: Router
+    public route: Router
   ) { }
 
   ngOnInit(): void {

@@ -14,26 +14,26 @@
         </i>
       </a>
 
-      <a mat-list-item (click)="pageOn = 'mapa'" routerLink="mapa" [class]="route.url == '/home/mapa' && route.url != '/home/dashboard' ? 'page-selected' : ''">
+      <a mat-list-item (click)="pageOn = 'mapa'" routerLink="mapa" [class]="pageOn == 'mapa' && route.url != '/home/dashboard' ? 'page-selected' : ''">
         <i class="material-icons">
           map
         </i>
       </a>
 
-      <a mat-list-item (click)="pageOn = 'agenda'" routerLink="agenda" [class]="route.url == '/home/agenda' && route.url != '/home/dashboard' ? 'page-selected' : ''">
+      <a mat-list-item (click)="pageOn = 'agenda'" routerLink="agenda" [class]="pageOn == 'agenda' && route.url != '/home/dashboard' ? 'page-selected' : ''">
         <i class="material-icons">
           event_note
         </i>
       </a>
 
-      <a mat-list-item (click)="pageOn = 'assistente'" routerLink="assistente" [class]="route.url == '/home/assistente' && route.url != '/home/dashboard' ? 'page-selected' : ''">
+      <a mat-list-item (click)="pageOn = 'assistente'" routerLink="assistente" [class]="pageOn == 'assistente' && route.url != '/home/dashboard' ? 'page-selected' : ''">
         <i class="material-icons">
           android
         </i>
       </a>
 
       <div class="footer">
-        <a mat-list-item (click)="pageOn = 'account'" routerLink="account" [class]="route.url == '/home/account' && route.url != '/home/dashboard' ? 'page-selected' : ''">
+        <a mat-list-item (click)="pageOn = 'account'" routerLink="account" [class]="pageOn == 'account' && route.url != '/home/dashboard' ? 'page-selected' : ''">
           <i class="material-icons">
             person
           </i>
