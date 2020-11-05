@@ -20,6 +20,7 @@ export class PetDesaparecidoCreateComponent implements OnInit {
     tipo: new FormControl('', Validators.required),
     dataNascimento: new FormControl('', Validators.required),
     cor: new FormControl('', Validators.required),
+    raca: new FormControl('', Validators.required),
     necessidadesMisc: new FormControl()
   });
 
@@ -55,6 +56,10 @@ export class PetDesaparecidoCreateComponent implements OnInit {
 
   get cor(): any {
     return this.formPet.get('cor');
+  }
+
+  get raca(): any {
+    return this.formPet.get('raca');
   }
 
   handleSubmit(): void {

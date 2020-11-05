@@ -36,6 +36,13 @@
       <mat-error *ngIf="tipo.invalid">Selecione o tipo</mat-error>
     </mat-form-field>
 
+
+    <mat-form-field class="max-width" appearance="outline">
+      <mat-label>Raça</mat-label>
+      <input matInput formControlName="raca" required>
+      <mat-error *ngIf="raca.invalid">Preencha a raça</mat-error>
+    </mat-form-field>
+
     <mat-form-field class="max-width" appearance="outline">
       <mat-label>Observação e Contato</mat-label>
       <textarea matInput formControlName="necessidadesMisc"></textarea>
