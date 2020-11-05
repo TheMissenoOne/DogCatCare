@@ -18,6 +18,8 @@ button + button {
 }
 
 .div-image img {
+
+  object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0 1em #3F8270;;
   width: 180px;
@@ -57,6 +59,8 @@ button + button {
 }
 
 .div-medlog img {
+
+  object-fit: cover;
   width: 32px;
   height: 32px;
   border-radius: 50%;

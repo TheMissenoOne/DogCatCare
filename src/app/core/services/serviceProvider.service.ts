@@ -85,7 +85,26 @@ export class ServiceProviderService {
       tipo: 'Veterinário',
       desc: 'Cuide da saúde e garanta o bem estar do seu pet conosco',
       image: 'https://static.vecteezy.com/system/resources/previews/000/123/775/original/free-vet-elements-vector.jpg',
+    },
+    {
+      id: 9,
+      latitude: -23.3932835,
+      longitude: -46.7515,
+      nome: 'Julio Guimarães',
+      tipo: 'Adestrador',
+      desc: 'Treinamento de pets de todos os tipos etamanhos',
+      image: 'https://2.bp.blogspot.com/-i3p9eSapePI/T3yX-lRuqPI/AAAAAAAAEcA/9l7kzJ-e0QI/s1600/sitCommand.jpg',
+    },
+    {
+      id: 10,
+      latitude: -23.3332835,
+      longitude: -46.3515,
+      nome: 'Daniela Fernandes',
+      tipo: 'PetMovel',
+      desc: 'Transporte de pets 24h (Apenas corridas na baixada santista)',
+      image: 'https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/Como-montar-um-Pet-Shop-Movel-passo-a-passo-2-300x134.jpg',
     }
+
 
 
   ];

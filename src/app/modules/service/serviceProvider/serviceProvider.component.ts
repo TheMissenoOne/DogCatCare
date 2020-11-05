@@ -11,6 +11,7 @@ import {AgendaService} from '../../../core/services/agenda.service';
 import {AgendaEvento} from '../../../shared/models/agendaEvento.model';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {PaymentComponent} from '../payment/payment.component';
+import { PetService } from 'src/app/core/services/pet.service';
 
 @Component({
   selector: 'app-service-provider',
@@ -30,12 +31,14 @@ export class ServiceProviderComponent implements OnInit {
   serviceFormOn = false;
   formServiceProvider: FormGroup;
   formService: FormGroup;
+  pets: any;
 
   constructor(
     private headerService: HeaderService,
     private serviceProviderService: ServiceProviderService,
     private serviceService: ServiceService,
     private agendaService: AgendaService,
+    private petService: PetService,
     private datePipe: DatePipe,
     private router: Router,
     private dialog: MatDialog
@@ -49,6 +52,7 @@ export class ServiceProviderComponent implements OnInit {
       this.router.navigate(['home']).then();
     }
 
+    this.pets = this.petService.listPetsByUserId(this.userId);
     this.services = this.serviceService.listByProviderId(this.serviceProvider.id);
 
     this.headerService.headerData = {
@@ -64,6 +68,7 @@ export class ServiceProviderComponent implements OnInit {
       longitude: new FormControl(this.serviceProvider.longitude, Validators.required),
       tipo: new FormControl(this.serviceProvider.tipo, Validators.required),
       desc: new FormControl(this.serviceProvider.desc, Validators.required),
+
     });
     this.image = this.serviceProvider.image;
   }
@@ -86,6 +91,7 @@ export class ServiceProviderComponent implements OnInit {
       observacao: new FormControl('', []),
       data: new FormControl('', Validators.required),
       hora: new FormControl('', Validators.required),
+      pet: new FormControl('', Validators.required),
     });
 
     this.service = service;
@@ -106,7 +112,10 @@ export class ServiceProviderComponent implements OnInit {
         data: this.datePipe.transform(eventoFormValues.data, 'yyyy-MM-dd'),
         desc: eventoFormValues.desc,
         hora: eventoFormValues.hora,
-        userId: this.userId
+        userId: this.userId,
+        pet: eventoFormValues.pet,
+        service: this.serviceProvider.nome
+
       };
 
       const data = {eventoFormValues, evento};

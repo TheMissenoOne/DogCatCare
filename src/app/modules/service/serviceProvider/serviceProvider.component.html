@@ -65,6 +65,16 @@
       <input matInput type="text" formControlName="preco" readonly>
     </mat-form-field>
 
+    <mat-form-field class="max-width" appearance="outline" required>
+      <mat-label>Pet</mat-label>
+      <mat-select formControlName="pet">
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let pet of pets" [value]="pet.nome">
+          {{pet.nome}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
     <mat-form-field class="max-width" appearance="outline">
       <mat-label>Observações</mat-label>
       <textarea matInput type="text" formControlName="observacao"></textarea>

@@ -32,6 +32,8 @@
 }
 
 .div-pet img {
+
+  object-fit: cover;
   width: 64px;
   height: 64px;
   border-radius: 50%;

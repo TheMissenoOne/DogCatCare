@@ -12,6 +12,8 @@ button + button {
 }
 
 .div-image {
+
+  object-fit: cover;
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
@@ -20,6 +22,7 @@ button + button {
 .div-image img {
   border-radius: 50%;
 
+  object-fit: cover;
   width: 180px;
   height: 180px;
 }

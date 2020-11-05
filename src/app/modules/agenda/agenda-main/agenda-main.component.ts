@@ -4,6 +4,10 @@ import {AgendaService} from '../../../core/services/agenda.service';
 import {AgendaEvento} from '../../../shared/models/agendaEvento.model';
 import {DatePipe} from '@angular/common';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { Service } from 'src/app/shared/models/service.model';
+import { Pet } from 'src/app/shared/models/pet.model';
+import { PetService } from 'src/app/core/services/pet.service';
+import { ServiceService } from 'src/app/core/services/service.service';
 
 @Component({
   selector: 'app-agenda-main',
@@ -21,10 +25,14 @@ export class AgendaMainComponent implements OnInit {
 
   formEvento: FormGroup;
   eventoFormOn = false;
+  services: Service[];
+  pets: Pet[];
 
   constructor(
     private headerService: HeaderService,
     private agendaService: AgendaService,
+    private petService: PetService,
+    private serviceService: ServiceService,
     private datePipe: DatePipe
   ) {
     this.headerService.headerData = {
@@ -35,6 +43,8 @@ export class AgendaMainComponent implements OnInit {
     };
 
     this.userId = this.headerService.user.id;
+    this.services = this.serviceService.listAll();
+    this.pets = this.petService.listPetsByUserId(this.userId);
   }
 
   ngOnInit(): void {
@@ -51,6 +61,8 @@ export class AgendaMainComponent implements OnInit {
       desc: new FormControl(evento ? evento.desc : '', Validators.required),
       data: new FormControl(evento ? evento.data : '', Validators.required),
       hora: new FormControl(evento ? evento.hora : '', Validators.required),
+      pet: new FormControl(evento ? evento.pet : ''),
+      service: new FormControl(evento ? evento.service : '')
     });
 
     this.evento = evento;

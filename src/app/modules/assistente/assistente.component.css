@@ -1,8 +1,11 @@
 .assistant{
+  position: relative;
   overflow: hidden;
 }
 iframe{
-  margin-top: -54px;
+  position: relative;
+  overflow: hidden;
+  top:-54px;
   height: 80vh;
   width: 100%;
   float: left;

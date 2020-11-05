@@ -117,6 +117,30 @@ export class ServiceService {
       preco: 'R$ 750,00',
       serviceProviderId: 8
     },
+    {
+      id: 18,
+      nome: 'Treinamento (Hora)',
+      preco: 'R$ 75,00',
+      serviceProviderId: 9
+    },
+    {
+      id: 19,
+      nome: 'Treinamento em Domicilio (Hora)',
+      preco: 'R$ 100,00',
+      serviceProviderId: 9
+    },
+    {
+      id: 20,
+      nome: 'Transporte (Municipal)',
+      preco: 'R$ 50,00',
+      serviceProviderId: 10
+    },
+    {
+      id: 21,
+      nome: 'Transporte (Intermunicipal)',
+      preco: 'R$ 80,00',
+      serviceProviderId: 10
+    }
     ];
 
   listAll(): Service[] {
