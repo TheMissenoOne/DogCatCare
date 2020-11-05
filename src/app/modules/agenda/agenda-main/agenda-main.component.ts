@@ -62,7 +62,7 @@ export class AgendaMainComponent implements OnInit {
       data: new FormControl(evento ? evento.data : '', Validators.required),
       hora: new FormControl(evento ? evento.hora : '', Validators.required),
       pet: new FormControl(evento ? evento.pet : ''),
-      service: new FormControl(evento ? evento.service : '')
+      service: new FormControl(evento ? ( evento.service ? evento.service : '' ) : '')
     });
 
     this.evento = evento;
