@@ -1,7 +1,11 @@
-.about{
+.terms{
+ max-height: 60vh;
+ min-height: 30vh;
 }
 
 img{
 
   height: 30vh;
 }
+
+

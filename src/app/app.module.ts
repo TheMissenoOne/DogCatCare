@@ -10,6 +10,7 @@ import { DefaultLayoutComponent } from './shared/layouts/default-layout.componen
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatExpansionModule} from '@angular/material/expansion';
 import {LoginRegisterLayoutComponent} from './shared/layouts/login-register-layout.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -68,6 +69,7 @@ import { SobreComponent } from './modules/sobre/sobre.component';
   ],
   imports: [
     BrowserModule,
+    MatExpansionModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
