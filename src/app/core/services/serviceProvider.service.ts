@@ -56,7 +56,7 @@ export class ServiceProviderService {
       longitude: -46.3415,
       nome: 'PetCenter',
       tipo: 'PetShop',
-      desc: 'Diversos serviços para seu pet',
+      desc: 'Diversos serviços para seu pet.',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOUBpO-Dxjlo3-ffD8SxlpA2iVi0eibCLHYw&usqp=CAU',
     },
     {
@@ -74,7 +74,7 @@ export class ServiceProviderService {
       longitude: -46.2415,
       nome: 'Renata Santos',
       tipo: 'Cuidador',
-      desc: 'Farei companhia e cuidarei do seu pet',
+      desc: 'Farei companhia e cuidarei do seu pet.',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ87NSZbqYcyszVSPuKu6ayIt9kmvwvG7nG6w&usqp=CAU',
     },
     {
@@ -83,7 +83,7 @@ export class ServiceProviderService {
       longitude: -46.24515,
       nome: 'Renan Tavares',
       tipo: 'Veterinário',
-      desc: 'Cuide da saúde e garanta o bem estar do seu pet conosco',
+      desc: 'Cuide da saúde e garanta o bem estar do seu pet conosco.',
       image: 'https://static.vecteezy.com/system/resources/previews/000/123/775/original/free-vet-elements-vector.jpg',
     },
     {
@@ -92,7 +92,7 @@ export class ServiceProviderService {
       longitude: -46.7515,
       nome: 'Julio Guimarães',
       tipo: 'Adestrador',
-      desc: 'Treinamento de pets de todos os tipos etamanhos',
+      desc: 'Treinamento de pets de todos as raças e tamanhos.',
       image: 'https://2.bp.blogspot.com/-i3p9eSapePI/T3yX-lRuqPI/AAAAAAAAEcA/9l7kzJ-e0QI/s1600/sitCommand.jpg',
     },
     {
@@ -101,7 +101,7 @@ export class ServiceProviderService {
       longitude: -46.3515,
       nome: 'Daniela Fernandes',
       tipo: 'PetMovel',
-      desc: 'Transporte de pets 24h (Apenas corridas na baixada santista)',
+      desc: 'Transporte de pets 24h (Apenas corridas na baixada santista).',
       image: 'https://petshopcontrol.blob.core.windows.net/blog/blog/wp-content/uploads/Como-montar-um-Pet-Shop-Movel-passo-a-passo-2-300x134.jpg',
     }
 
