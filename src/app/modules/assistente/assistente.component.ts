@@ -10,7 +10,7 @@ export class AssistenteComponent implements OnInit {
 
   constructor( private headerService: HeaderService) {
     this.headerService.headerData = {
-      icon: 'android',
+      icon: 'support_agent',
       pageTitle: 'Assistente',
       routeUrl: 'assistente',
       title: 'Assistente'

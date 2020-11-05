@@ -21,7 +21,7 @@ export class PetDesaparecidoListComponent implements OnInit {
     private router: Router,
   ) {
     this.headerService.headerData = {
-      icon: 'pets',
+      icon: 'person_search',
       pageTitle: 'Pets Desaparecidos',
       routeUrl: 'pet_desaparecido',
       title: 'Pets Desaparecidos'

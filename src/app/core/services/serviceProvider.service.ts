@@ -18,10 +18,10 @@ export class ServiceProviderService {
       id: 1,
       latitude: -23.9684635,
       longitude: -46.280415,
-      nome: 'Kiko',
+      nome: 'Luna',
       tipo: 'PetShop',
       desc: 'Os mais diversos serviços para o seu bichinho.',
-      image: 'https://www.dataon.com.br/wp-content/uploads/2019/09/Como-montar-um-Petshop.jpg',
+      image: 'https://blog.agenciadosite.com.br/wp-content/uploads/2017/02/logo-para-petshop-20.jpg',
   },
     {
       id: 2,
