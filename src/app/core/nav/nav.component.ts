@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -10,12 +10,15 @@ export class NavComponent implements OnInit {
 
   navOn = true;
   pageOn = 'dashboard';
+  public innerHeight: any;
 
   constructor(
     public route: Router
   ) { }
 
+
   ngOnInit(): void {
+    this.innerHeight = window.innerHeight;
   }
 
   logout(): void {
@@ -25,6 +28,11 @@ export class NavComponent implements OnInit {
 
   toggleNav(): void {
     this.navOn = !this.navOn;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event): void {
+    this.innerHeight = window.innerHeight;
   }
 
 }

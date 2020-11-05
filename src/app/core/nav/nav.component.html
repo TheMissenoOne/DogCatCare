@@ -44,7 +44,8 @@
         </i>
       </a>
 
-      <div class="footer">
+
+      <div [class]="innerHeight > 430 ? 'footer' : ''">
         <a mat-list-item (click)="pageOn = 'account'" routerLink="account" [class]="pageOn == 'account' && route.url != '/home/dashboard' ? 'page-selected' : ''">
           <i class="material-icons">
             person
