@@ -45,7 +45,7 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field *ngIf="evento.service!=''" class="max-width" appearance="outline">
+      <mat-form-field *ngIf="evento ? (evento.service != null) : false" class="max-width" appearance="outline">
         <mat-label>Prestador</mat-label>
         <input matInput type="text" formControlName="service" readonly >
       </mat-form-field>
