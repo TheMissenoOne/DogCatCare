@@ -63,7 +63,7 @@ export class ServiceProviderService {
       id: 6,
       latitude: -23.423835,
       longitude: -46.8415,
-      nome: 'Horel Miau',
+      nome: 'Hotel Miau',
       tipo: 'PetHotel',
       desc: 'Um hotel para hospedar seu pet quando precisar.',
       image: 'https://media.istockphoto.com/vectors/pet-hotel-vector-id519164038?b=1&k=6&m=519164038&s=612x612&w=0&h=LJqhjJ6OVgkhzG787hLLv6YF4-RIluOYbg5WQhMHXqE=',
